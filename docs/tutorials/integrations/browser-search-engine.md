@@ -4,14 +4,14 @@ title: "🌐 Browser Search Engine"
 ---
 
 :::warning
-This tutorial is a community contribution and is not supported by the Open WebUI team. It serves only as a demonstration on how to customize Open WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
+This tutorial is a community contribution and is not supported by the Sage WebUI team. It serves only as a demonstration on how to customize Sage WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
 :::
 
 # Browser Search Engine Integration
 
-Open WebUI allows you to integrate directly into your web browser. This tutorial will guide you through the process of setting up Open WebUI as a custom search engine, enabling you to execute queries easily from your browser's address bar.
+Sage WebUI allows you to integrate directly into your web browser. This tutorial will guide you through the process of setting up Sage WebUI as a custom search engine, enabling you to execute queries easily from your browser's address bar.
 
-## Setting Up Open WebUI as a Search Engine
+## Setting Up Sage WebUI as a Search Engine
 
 ### Prerequisites
 
@@ -26,7 +26,7 @@ Setting the `WEBUI_URL` environment variable ensures your browser knows where to
 
 #### Using Docker Environment Variables
 
-If you are running Open WebUI using Docker, you can set the environment variable in your `docker run` command:
+If you are running Sage WebUI using Docker, you can set the environment variable in your `docker run` command:
 
 ```bash
 docker run -d \
@@ -45,7 +45,7 @@ Alternatively, you can add the variable to your `.env` file:
 WEBUI_URL=https://<your-open-webui-url>
 ```
 
-### Step 2: Add Open WebUI as a Custom Search Engine
+### Step 2: Add Sage WebUI as a Custom Search Engine
 
 ### For Chrome
 
@@ -53,7 +53,7 @@ WEBUI_URL=https://<your-open-webui-url>
 2. Select **Search engine** from the sidebar, then click on **Manage search engines**.
 3. Click **Add** to create a new search engine.
 4. Fill in the details as follows:
-    - **Search engine**: Open WebUI Search
+    - **Search engine**: Sage WebUI Search
     - **Keyword**: webui (or any keyword you prefer)
     - **URL with %s in place of query**:
 
@@ -65,15 +65,15 @@ WEBUI_URL=https://<your-open-webui-url>
 
 ### For Firefox
 
-1. Go to Open WebUI in Firefox.
+1. Go to Sage WebUI in Firefox.
 2. Expand the address bar by clicking on it.
-3. Click the plus icon that is enclosed in a green circle at the bottom of the expanded address bar. This adds Open WebUI's search to the search engines in your preferences.
+3. Click the plus icon that is enclosed in a green circle at the bottom of the expanded address bar. This adds Sage WebUI's search to the search engines in your preferences.
 
 Alternatively:
 
-1. Go to Open WebUI in Firefox.
+1. Go to Sage WebUI in Firefox.
 2. Right-click on the address bar.
-3. Select "Add Open WebUI" (or similar) from the context menu.
+3. Select "Add Sage WebUI" (or similar) from the context menu.
 
 ### Optional: Using Specific Models
 
@@ -93,12 +93,12 @@ Once the search engine is set up, you can perform searches directly from the add
 webui your search query
 ```
 
-This command will redirect you to the Open WebUI interface with your search results.
+This command will redirect you to the Sage WebUI interface with your search results.
 
 ## Troubleshooting
 
 If you encounter any issues, check the following:
 
-- Ensure the `WEBUI_URL` is correctly configured and points to a valid Open WebUI instance.
+- Ensure the `WEBUI_URL` is correctly configured and points to a valid Sage WebUI instance.
 - Double-check that the search engine URL format is correctly entered in your browser settings.
-- Confirm your internet connection is active and that the Open WebUI service is running smoothly.
+- Confirm your internet connection is active and that the Sage WebUI service is running smoothly.

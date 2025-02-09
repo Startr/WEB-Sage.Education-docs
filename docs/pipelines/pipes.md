@@ -12,7 +12,7 @@ Pipes are functions that can be used to perform actions prior to returning LLM m
   </a>
 </p>
 
-Pipes that are defined in your WebUI show up as a new model with an "External" designation attached to them. An example of two Pipe models, `Database RAG Pipeline` and `DOOM`, can be seen below next to two self-hosted models:
+Pipes that are defined in your WebUI show up as a new model with an "External" designation attached to them. An example of two Pipe models, `Database RAG Pipeline` and `DOOM`, can be seen below next to two  models:
 
 <p align="center">
   <a href="#">

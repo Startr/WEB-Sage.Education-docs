@@ -4,19 +4,19 @@ title: "🪶 Apache Tika Extraction"
 ---
 
 :::warning
-This tutorial is a community contribution and is not supported by the Open WebUI team. It serves only as a demonstration on how to customize Open WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
+This tutorial is a community contribution and is not supported by the Sage WebUI team. It serves only as a demonstration on how to customize Sage WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
 :::
 
 ## 🪶 Apache Tika Extraction
 
-This documentation provides a step-by-step guide to integrating Apache Tika with Open WebUI. Apache Tika is a content analysis toolkit that can be used to detect and extract metadata and text content from over a thousand different file types. All of these file types can be parsed through a single interface, making Tika useful for search engine indexing, content analysis, translation, and much more.
+This documentation provides a step-by-step guide to integrating Apache Tika with Sage WebUI. Apache Tika is a content analysis toolkit that can be used to detect and extract metadata and text content from over a thousand different file types. All of these file types can be parsed through a single interface, making Tika useful for search engine indexing, content analysis, translation, and much more.
 
 Prerequisites
 ------------
 
-* Open WebUI instance
+* Sage WebUI instance
 * Docker installed on your system
-* Docker network set up for Open WebUI
+* Docker network set up for Sage WebUI
 
 Integration Steps
 ----------------
@@ -27,7 +27,7 @@ You have two options to run Apache Tika:
 
 **Option 1: Using Docker Compose**
 
-Create a new file named `docker-compose.yml` in the same directory as your Open WebUI instance. Add the following configuration to the file:
+Create a new file named `docker-compose.yml` in the same directory as your Sage WebUI instance. Add the following configuration to the file:
 
 ```yml
 services:
@@ -56,13 +56,13 @@ docker run -d --name tika \
   apache/tika:latest-full
 ```
 
-Note that if you choose to use the Docker run command, you'll need to specify the `--network` flag if you want to run the container in the same network as your Open WebUI instance.
+Note that if you choose to use the Docker run command, you'll need to specify the `--network` flag if you want to run the container in the same network as your Sage WebUI instance.
 
-### Step 2: Configure Open WebUI to Use Apache Tika
+### Step 2: Configure Sage WebUI to Use Apache Tika
 
-To use Apache Tika as the context extraction engine in Open WebUI, follow these steps:
+To use Apache Tika as the context extraction engine in Sage WebUI, follow these steps:
 
-* Log in to your Open WebUI instance.
+* Log in to your Sage WebUI instance.
 * Navigate to the `Admin Panel` settings menu.
 * Click on `Settings`.
 * Click on the `Documents` tab.
@@ -167,14 +167,14 @@ By following these steps, you can verify that Apache Tika is working correctly i
 Troubleshooting
 --------------
 
-* Make sure the Apache Tika service is running and accessible from the Open WebUI instance.
+* Make sure the Apache Tika service is running and accessible from the Sage WebUI instance.
 * Check the Docker logs for any errors or issues related to the Apache Tika service.
-* Verify that the context extraction engine URL is correctly configured in Open WebUI.
+* Verify that the context extraction engine URL is correctly configured in Sage WebUI.
 
 Benefits of Integration
 ----------------------
 
-Integrating Apache Tika with Open WebUI provides several benefits, including:
+Integrating Apache Tika with Sage WebUI provides several benefits, including:
 
 * **Improved Metadata Extraction**: Apache Tika's advanced metadata extraction capabilities can help you extract accurate and relevant data from your files.
 * **Support for Multiple File Formats**: Apache Tika supports a wide range of file formats, making it an ideal solution for organizations that work with diverse file types.
@@ -183,4 +183,4 @@ Integrating Apache Tika with Open WebUI provides several benefits, including:
 Conclusion
 ----------
 
-Integrating Apache Tika with Open WebUI is a straightforward process that can improve the metadata extraction capabilities of your Open WebUI instance. By following the steps outlined in this documentation, you can easily set up Apache Tika as a context extraction engine for Open WebUI.
+Integrating Apache Tika with Sage WebUI is a straightforward process that can improve the metadata extraction capabilities of your Sage WebUI instance. By following the steps outlined in this documentation, you can easily set up Apache Tika as a context extraction engine for Sage WebUI.

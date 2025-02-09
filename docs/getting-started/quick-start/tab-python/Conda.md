@@ -13,7 +13,7 @@
    conda activate open-webui
    ```
 
-3. **Install Open WebUI:**
+3. **Install Sage WebUI:**
 
    ```bash
    pip install open-webui

@@ -6,7 +6,7 @@ export const TopBanners = () => {
 			imgSrc: "/ads/pipelines-banner.png",
 			mobileImgSrc: "/ads/pipelines-banner-mobile.png",
 			url: "https://github.com/open-webui/pipelines",
-			name: "Open WebUI Pipelines",
+			name: "Sage WebUI Pipelines",
 			description:
 				"Pipelines: Versatile, UI-Agnostic OpenAI-Compatible Plugin Framework",
 		},

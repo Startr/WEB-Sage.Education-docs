@@ -1,10 +1,10 @@
 ## Quick Start with Docker 🐳
 
-Follow these steps to install Open WebUI with Docker.
+Follow these steps to install Sage WebUI with Docker.
 
-## Step 1: Pull the Open WebUI Image
+## Step 1: Pull the Sage WebUI Image
 
-Start by pulling the latest Open WebUI Docker image from the GitHub Container Registry.
+Start by pulling the latest Sage WebUI Docker image from the GitHub Container Registry.
 
 ```bash
 docker pull ghcr.io/open-webui/open-webui:main
@@ -46,7 +46,7 @@ You cannot switch between single-user mode and multi-account mode after this cha
 
 #### Advanced Configuration: Connecting to Ollama on a Different Server
 
-To connect Open WebUI to an Ollama server located on another host, add the `OLLAMA_BASE_URL` environment variable:
+To connect Sage WebUI to an Ollama server located on another host, add the `OLLAMA_BASE_URL` environment variable:
 
 ```bash
 docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
@@ -54,7 +54,7 @@ docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-webui:
 
 ## Access the WebUI
 
-After the container is running, access Open WebUI at:
+After the container is running, access Sage WebUI at:
 
 [http://localhost:3000](http://localhost:3000)
 

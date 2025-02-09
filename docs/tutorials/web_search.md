@@ -4,12 +4,12 @@ title: "🌐 Web Search"
 ---
 
 :::warning
-This tutorial is a community contribution and is not supported by the Open WebUI team. It serves only as a demonstration on how to customize Open WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
+This tutorial is a community contribution and is not supported by the Sage WebUI team. It serves only as a demonstration on how to customize Sage WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
 :::
 
 # 🌐 Web Search
 
-This guide provides instructions on how to set up web search capabilities in Open WebUI using various search engines.
+This guide provides instructions on how to set up web search capabilities in Sage WebUI using various search engines.
 
 ## SearXNG (Docker)
 
@@ -17,7 +17,7 @@ This guide provides instructions on how to set up web search capabilities in Ope
 
 ## 1. SearXNG Configuration
 
-To configure SearXNG optimally for use with Open WebUI, follow these steps:
+To configure SearXNG optimally for use with Sage WebUI, follow these steps:
 
 **Step 1: `git clone` SearXNG Docker and navigate to the folder:**
 
@@ -260,7 +260,7 @@ Alternatively, if you don't want to modify the default configuration, you can si
 
 ### Docker Compose Setup
 
-Add the following environment variables to your Open WebUI `docker-compose.yaml` file:
+Add the following environment variables to your Sage WebUI `docker-compose.yaml` file:
 
 ```yaml
 services:
@@ -326,7 +326,7 @@ docker run --name searxng --env-file .env -v ./searxng:/etc/searxng:rw -p 8080:8
 
 ## 3. Confirm Connectivity
 
-Confirm connectivity to SearXNG from your Open WebUI container instance in your command line interface:
+Confirm connectivity to SearXNG from your Sage WebUI container instance in your command line interface:
 
 ```bash
 docker exec -it open-webui curl http://host.docker.internal:8080/search?q=this+is+a+test+query&format=json
@@ -342,7 +342,7 @@ docker exec -it open-webui curl http://host.docker.internal:8080/search?q=this+i
 * `http://searxng:8080/search?q=<query>` (using the container name and exposed port, suitable for Docker-based setups)
 * `http://host.docker.internal:8080/search?q=<query>` (using the `host.docker.internal` DNS name and the host port, suitable for Docker-based setups)
 * `http://<searxng.local>/search?q=<query>` (using a local domain name, suitable for local network access)
-* `https://<search.domain.com>/search?q=<query>` (using a custom domain name for a self-hosted SearXNG instance, suitable for public or private access)
+* `https://<search.domain.com>/search?q=<query>` (using a custom domain name for a  SearXNG instance, suitable for public or private access)
 
 **Do note the `/search?q=<query>` part is mandatory.**
 5. Adjust the `Search Result Count` and `Concurrent Requests` values accordingly
@@ -358,7 +358,7 @@ Here you can toggle Web Search On/Off.
 
 ![Web Search UI Toggle](/images/web_search_toggle.png)
 
-By following these steps, you will have successfully set up SearXNG with Open WebUI, enabling you to perform web searches using the SearXNG engine.
+By following these steps, you will have successfully set up SearXNG with Sage WebUI, enabling you to perform web searches using the SearXNG engine.
 
 #### Note
 
@@ -374,12 +374,12 @@ This is enabled on a per session basis eg. reloading the page, changing to anoth
 2. Go to [control panel](https://programmablesearchengine.google.com/controlpanel/all) and click `Add` button
 3. Enter a search engine name, set the other properties to suit your needs, verify you're not a robot and click `Create` button.
 4. Generate `API key` and get the `Search engine ID`. (Available after the engine is created)
-5. With `API key` and `Search engine ID`, open `Open WebUI Admin panel` and click `Settings` tab, and then click `Web Search`
+5. With `API key` and `Search engine ID`, open `Sage WebUI Admin panel` and click `Settings` tab, and then click `Web Search`
 6. Enable `Web search` and Set `Web Search Engine` to `google_pse`
 7. Fill `Google PSE API Key` with the `API key` and `Google PSE Engine Id` (# 4)
 8. Click `Save`
 
-![Open WebUI Admin panel](/images/tutorial_google_pse1.png)
+![Sage WebUI Admin panel](/images/tutorial_google_pse1.png)
 
 #### Note
 
@@ -392,7 +392,7 @@ Search the web ;-)
 
 ### Docker Compose Setup
 
-Add the following environment variables to your Open WebUI `docker-compose.yaml` file:
+Add the following environment variables to your Sage WebUI `docker-compose.yaml` file:
 
 ```yaml
 services:
@@ -410,14 +410,14 @@ services:
 ### Setup
 
 1. Please visit [Mojeek Search API page](https://www.mojeek.com/services/search/web-search-api/) to obtain an `API key`
-2. With `API key`, open `Open WebUI Admin panel` and click `Settings` tab, and then click `Web Search`
+2. With `API key`, open `Sage WebUI Admin panel` and click `Settings` tab, and then click `Web Search`
 3. Enable `Web search` and Set `Web Search Engine` to `mojeek`
 4. Fill `Mojeek Search API Key` with the `API key`
 5. Click `Save`
 
 ### Docker Compose Setup
 
-Add the following environment variables to your Open WebUI `docker-compose.yaml` file:
+Add the following environment variables to your Sage WebUI `docker-compose.yaml` file:
 
 ```yaml
 services:
@@ -438,13 +438,13 @@ services:
 
 1. Go to [SearchApi](https://searchapi.io), and log on or create a new account.
 2. Go to `Dashboard` and copy the API key.
-3. With `API key`, open `Open WebUI Admin panel` and click `Settings` tab, and then click `Web Search`.
+3. With `API key`, open `Sage WebUI Admin panel` and click `Settings` tab, and then click `Web Search`.
 4. Enable `Web search` and set `Web Search Engine` to `searchapi`.
 5. Fill `SearchApi API Key` with the `API key` that you copied in step 2 from [SearchApi](https://www.searchapi.io/) dashboard.
 6. [Optional] Enter the `SearchApi engine` name you want to query. Example, `google`, `bing`, `baidu`, `google_news`, `bing_news`, `google_videos`, `google_scholar` and `google_patents.` By default, it is set to `google`.
 7. Click `Save`.
 
-![Open WebUI Admin panel](/images/tutorial_searchapi_search.png)
+![Sage WebUI Admin panel](/images/tutorial_searchapi_search.png)
 
 #### Note
 
@@ -480,7 +480,7 @@ Coming Soon
 
 ### Setup
 
-No setup is required to use DuckDuckGo API for Open WebUI's built in web search! DuckDuckGo works out of the box in Open WebUI.
+No setup is required to use DuckDuckGo API for Sage WebUI's built in web search! DuckDuckGo works out of the box in Sage WebUI.
 
 :::note
 There is a possibility of your web searches being rate limited.
@@ -504,7 +504,7 @@ Coming Soon
 
 1. Navigate to the [AzurePortal](https://portal.azure.com/#create/Microsoft.BingSearch) and create a new resource. After creation, you’ll be redirected to the resource overview page. From there, select "Click here to manage keys." ![click here to manage keys](https://github.com/user-attachments/assets/dd2a3c67-d6a7-4198-ba54-67a3c8acff6d)
 2. On the key management page, locate Key1 or Key2 and copy your desired key.
-3. Open the Open WebUI Admin Panel, switch to the Settings tab, and then select Web Search.
+3. Open the Sage WebUI Admin Panel, switch to the Settings tab, and then select Web Search.
 4. Enable the Web search option and set the Web Search Engine to bing.
 5. Fill `SearchApi API Key` with the `API key` that you copied in step 2 from [AzurePortal](https://portal.azure.com/#create/Microsoft.BingSearch) dashboard.
 6. Click `Save`.

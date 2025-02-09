@@ -1,13 +1,13 @@
 ---
 sidebar_position: 300 
-title: "🔄 Updating Open WebUI"
+title: "🔄 Updating Sage WebUI"
 ---
 
 
 
-## Why isn't my Open WebUI updating?
+## Why isn't my Sage WebUI updating?
 
-To update your local Docker installation of Open WebUI to the latest version available, you can either use **Watchtower** or manually update the container. Follow either of the steps provided below to be guided through updating your existing Open WebUI image.
+To update your local Docker installation of Sage WebUI to the latest version available, you can either use **Watchtower** or manually update the container. Follow either of the steps provided below to be guided through updating your existing Sage WebUI image.
 
 ### Manual Update
 
@@ -48,9 +48,9 @@ docker volume rm open-webui
 docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main
 ```
 
-## Automatically Updating Open WebUI with Watchtower
+## Automatically Updating Sage WebUI with Watchtower
 
-You can use [Watchtower](https://containrrr.dev/watchtower/) to automate the update process for Open WebUI. Here are three options:
+You can use [Watchtower](https://containrrr.dev/watchtower/) to automate the update process for Sage WebUI. Here are three options:
 
 ### Option 1: One-time Update
 
@@ -62,7 +62,7 @@ docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/wa
 
 ### Option 2: Running Watchtower as a Separate Container
 
-You can run Watchtower as a separate container that watches and updates your Open WebUI container:
+You can run Watchtower as a separate container that watches and updates your Sage WebUI container:
 
 ```bash
 docker run -d --name watchtower \
@@ -70,11 +70,11 @@ docker run -d --name watchtower \
   containrrr/watchtower -i 300 open-webui
 ```
 
-This will start Watchtower in detached mode, watching your Open WebUI container for updates every 5 minutes.
+This will start Watchtower in detached mode, watching your Sage WebUI container for updates every 5 minutes.
 
 ### Option 3: Integrating Watchtower with a `docker-compose.yml` File
 
-You can also integrate Watchtower with your `docker-compose.yml` file to automate updates for Open WebUI (**For Nvidia GPU support, add `--gpus all` to the docker run command**):
+You can also integrate Watchtower with your `docker-compose.yml` file to automate updates for Sage WebUI (**For Nvidia GPU support, add `--gpus all` to the docker run command**):
 
 ```yml
 version: '3'
@@ -98,7 +98,7 @@ volumes:
   open-webui:
 ```
 
-In this example, Watchtower is integrated with the `docker-compose.yml` file and watches the Open WebUI container for updates every 5 minutes.
+In this example, Watchtower is integrated with the `docker-compose.yml` file and watches the Sage WebUI container for updates every 5 minutes.
 
 ## Persistent Data in Docker Volumes
 

@@ -1,6 +1,6 @@
 ### Installation with `uv` 
 
-The `uv` runtime manager ensures seamless Python environment management for applications like Open WebUI. Follow these steps to get started:
+The `uv` runtime manager ensures seamless Python environment management for applications like Sage WebUI. Follow these steps to get started:
 
 #### 1. Install `uv`
 
@@ -16,9 +16,9 @@ Pick the appropriate installation command for your operating system:
   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
   ```
 
-#### 2. Run Open WebUI
+#### 2. Run Sage WebUI
 
-Once `uv` is installed, running Open WebUI is a breeze. Use the command below, ensuring to set the `DATA_DIR` environment variable to avoid data loss. Example paths are provided for each platform:
+Once `uv` is installed, running Sage WebUI is a breeze. Use the command below, ensuring to set the `DATA_DIR` environment variable to avoid data loss. Example paths are provided for each platform:
 
 - **macOS/Linux**:  
   ```bash

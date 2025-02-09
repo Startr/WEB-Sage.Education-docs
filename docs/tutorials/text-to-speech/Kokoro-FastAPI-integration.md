@@ -4,21 +4,21 @@ title: "🗨️ Kokoro-FastAPI Using Docker"
 ---
 
 :::warning
-This tutorial is a community contribution and is not supported by the Open WebUI team. It serves only as a demonstration on how to customize Open WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
+This tutorial is a community contribution and is not supported by the Sage WebUI team. It serves only as a demonstration on how to customize Sage WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
 :::
 
-# Integrating `Kokoro-FastAPI` 🗣️ with Open WebUI
+# Integrating `Kokoro-FastAPI` 🗣️ with Sage WebUI
 
 ## What is `Kokoro-FastAPI`?
 
 [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) is a dockerized FastAPI wrapper for the [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) text-to-speech model that implements the OpenAI API endpoint specification. It offers high-performance text-to-speech with impressive generation speeds:
 
-- Small local model (~<300mb on disk, additional storage needed up to 5gb for CUDA drivers, etc)
+- Small local model (300mb on disk, additional storage needed up to 5gb for CUDA drivers, etc)
 - 100x+ real-time speed via HF A100
 - 35-50x+ real-time speed via 4060Ti
 - 5x+ real-time speed via M3 Pro CPU
 - Low latecy (sub 1s with GPU), customizable by chunking parameters
-- 
+
 
 ## Key Features
 
@@ -53,7 +53,7 @@ This tutorial is a community contribution and is not supported by the Open WebUI
 ## Requirements
 
 - Docker installed on your system
-- Open WebUI running
+- Sage WebUI running
 - For GPU support: NVIDIA GPU with CUDA 12.3
 - For CPU-only: No special requirements
 
@@ -72,9 +72,9 @@ docker run -d -p 8880:8880 -p 7860:7860 remsky/kokoro-fastapi-gpu:latest
 docker run -d -p 8880:8880 -p 7860:7860 remsky/kokoro-fastapi-cpu:latest
 ```
 
-## Setting up Open WebUI to use `Kokoro-FastAPI`
+## Setting up Sage WebUI to use `Kokoro-FastAPI`
 
-To use Kokoro-FastAPI with Open WebUI, follow these steps:
+To use Kokoro-FastAPI with Sage WebUI, follow these steps:
 
 - Open the Admin Panel and go to `Settings` -> `Audio`
 - Set your TTS Settings to match the following:

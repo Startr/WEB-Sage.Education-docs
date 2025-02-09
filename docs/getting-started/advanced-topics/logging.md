@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: "📜 Open WebUI Logging"
+title: "📜 Sage WebUI Logging"
 ---
 
 ## Browser Client Logging ##

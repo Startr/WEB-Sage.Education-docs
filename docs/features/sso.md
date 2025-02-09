@@ -5,7 +5,7 @@ title: "🔒 SSO: Federated Authentication Support"
 
 # Federated Authentication Support
 
-Open WebUI supports several forms of federated authentication:
+Sage WebUI supports several forms of federated authentication:
 
 1. OAuth2
     1. Google
@@ -61,13 +61,13 @@ The following environment variables are used:
 
 ### OAuth Role Management
 
-Any OAuth provider that can be configured to return roles in the access token can be used to manage roles in Open WebUI.
+Any OAuth provider that can be configured to return roles in the access token can be used to manage roles in Sage WebUI.
 To use this feature set `ENABLE_OAUTH_ROLE_MANAGEMENT` to `true`.
 You can configure the following environment variables to match the roles returned by the OAuth provider:
 
 1. `OAUTH_ROLES_CLAIM` - The claim that contains the roles. Defaults to `roles`. Can also be nested, for example `user.roles`.
-1. `OAUTH_ALLOWED_ROLES` - A comma-separated list of roles that are allowed to log in (receive open webui role `user`).
-1. `OAUTH_ADMIN_ROLES` - A comma-separated list of roles that are allowed to log in as an admin (receive open webui role `admin`).
+1. `OAUTH_ALLOWED_ROLES` - A comma-separated list of roles that are allowed to log in (receive Sage WebUI role `user`).
+1. `OAUTH_ADMIN_ROLES` - A comma-separated list of roles that are allowed to log in as an admin (receive Sage WebUI role `admin`).
 
 :::info
 
@@ -77,19 +77,19 @@ If changing the role of a logged in user, they will need to log out and log back
 
 ## Trusted Header
 
-Open WebUI is able to delegate authentication to an authenticating reverse proxy that passes in the user's details in HTTP headers.
+Sage WebUI is able to delegate authentication to an authenticating reverse proxy that passes in the user's details in HTTP headers.
 There are several example configurations that are provided in this page.
 
 :::danger
 
-Incorrect configuration can allow users to authenticate as any user on your Open WebUI instance.
-Make sure to allow only the authenticating proxy access to Open WebUI, such as setting `HOST=127.0.0.1` to only listen on the loopback interface.
+Incorrect configuration can allow users to authenticate as any user on your Sage WebUI instance.
+Make sure to allow only the authenticating proxy access to Sage WebUI, such as setting `HOST=127.0.0.1` to only listen on the loopback interface.
 
 :::
 
 ### Generic Configuration
 
-When the `WEBUI_AUTH_TRUSTED_EMAIL_HEADER` environment variable is set, Open WebUI will use the value of the header specified as the email address of the user, handling automatic registration and login.
+When the `WEBUI_AUTH_TRUSTED_EMAIL_HEADER` environment variable is set, Sage WebUI will use the value of the header specified as the email address of the user, handling automatic registration and login.
 
 For example, setting `WEBUI_AUTH_TRUSTED_EMAIL_HEADER=X-User-Email` and passing a HTTP header of `X-User-Email: example@example.com` would authenticate the request with the email `example@example.com`.
 
@@ -99,7 +99,7 @@ Optionally, you can also define the `WEBUI_AUTH_TRUSTED_NAME_HEADER` to determin
 
 [Tailscale Serve](https://tailscale.com/kb/1242/tailscale-serve) allows you to share a service within your tailnet, and Tailscale will set the header `Tailscale-User-Login` with the email address of the requester.
 
-Below is an example serve config with a corresponding Docker Compose file that starts a Tailscale sidecar, exposing Open WebUI to the tailnet with the tag `open-webui` and hostname `open-webui`, and can be reachable at `https://open-webui.TAILNET_NAME.ts.net`.
+Below is an example serve config with a corresponding Docker Compose file that starts a Tailscale sidecar, exposing Sage WebUI to the tailnet with the tag `open-webui` and hostname `open-webui`, and can be reachable at `https://open-webui.TAILNET_NAME.ts.net`.
 You will need to create an OAuth client with device write permission to pass into the Tailscale container as `TS_AUTHKEY`.
 
 ```json title="tailscale/serve.json"
@@ -159,14 +159,14 @@ volumes:
 
 :::warning
 
-If you run Tailscale in the same network context as Open WebUI, then by default users will be able to directly reach out to Open WebUI without going through the Serve proxy.
+If you run Tailscale in the same network context as Sage WebUI, then by default users will be able to directly reach out to Sage WebUI without going through the Serve proxy.
 You will need use Tailscale's ACLs to restrict access to only port 443.
 
 :::
 
 ### Cloudflare Tunnel with Cloudflare Access
 
-[Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/) can be used with [Cloudflare Access](https://developers.cloudflare.com/cloudflare-one/policies/access/) to protect Open WebUI with SSO.
+[Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/) can be used with [Cloudflare Access](https://developers.cloudflare.com/cloudflare-one/policies/access/) to protect Sage WebUI with SSO.
 This is barely documented by Cloudflare, but `Cf-Access-Authenticated-User-Email` is set with the email address of the authenticated user.
 
 Below is an example Docker Compose file that sets up a Cloudflare sidecar.

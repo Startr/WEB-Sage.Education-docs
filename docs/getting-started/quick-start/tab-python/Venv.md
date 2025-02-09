@@ -25,7 +25,7 @@ Create isolated Python environments using `venv`.
      venv\Scripts\activate
      ```
 
-3. **Install Open WebUI:**
+3. **Install Sage WebUI:**
 
    ```bash
    pip install open-webui

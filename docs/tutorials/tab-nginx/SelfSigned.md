@@ -71,7 +71,7 @@ Using self-signed certificates is suitable for development or internal use where
 
 #### Access the WebUI
 
-Access Open WebUI via HTTPS at:
+Access Sage WebUI via HTTPS at:
 
 [https://your_domain_or_IP](https://your_domain_or_IP)
 

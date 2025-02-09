@@ -12,9 +12,9 @@ with us, as we'd love to feature it here!
 
 ## Featured Tutorials
 
-[Monitoring Open WebUI with Filters](https://medium.com/@0xthresh/monitor-open-webui-with-datadog-llm-observability-620ef3a598c6) (Medium article by @0xthresh)
+[Monitoring Sage WebUI with Filters](https://medium.com/@0xthresh/monitor-open-webui-with-datadog-llm-observability-620ef3a598c6) (Medium article by @0xthresh)
 
-- A detailed guide to monitoring the Open WebUI using DataDog LLM observability.
+- A detailed guide to monitoring the Sage WebUI using DataDog LLM observability.
   
 [Building Customized Text-To-SQL Pipelines](https://www.youtube.com/watch?v=y7frgUWrcT4) (YouTube video by Jordan Nanos)
 
@@ -22,4 +22,4 @@ with us, as we'd love to feature it here!
 
 [Demo and Code Review for Text-To-SQL with Open-WebUI](https://www.youtube.com/watch?v=iLVyEgxGbg4) (YouTube video by Jordan Nanos)
 
-- A hands-on demonstration and code review on utilizing text-to-sql tools powered by the Open WebUI.
+- A hands-on demonstration and code review on utilizing text-to-sql tools powered by the Sage WebUI.

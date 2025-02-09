@@ -3,7 +3,7 @@ sidebar_position: 5
 title: "🛠️ Development Guide"
 ---
 
-Welcome to the **Open WebUI Development Setup Guide!** Whether you're a novice or an experienced developer, this guide will help you set up a **local development environment** for both the frontend and backend components. Let’s dive in! 🚀
+Welcome to the **Sage WebUI Development Setup Guide!** Whether you're a novice or an experienced developer, this guide will help you set up a **local development environment** for both the frontend and backend components. Let’s dive in! 🚀
 
 ## System Requirements
 
@@ -96,7 +96,7 @@ If you encounter memory-related errors during the build, increase the **Node.js 
 - **Hot Reload Not Working**:  
    Verify that **watch mode** is enabled for both frontend and backend.
 
-## Contributing to Open WebUI
+## Contributing to Sage WebUI
 
 ### Local Workflow
 

@@ -10,7 +10,7 @@ Docker Compose requires an additional package, `docker-compose-v2`.
 
 ## Example `docker-compose.yml`
 
-Here is an example configuration file for setting up Open WebUI with Docker Compose:
+Here is an example configuration file for setting up Sage WebUI with Docker Compose:
 
 ```yaml
 version: '3'

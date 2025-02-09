@@ -4,12 +4,12 @@ title: "🦊 Firefox AI Chatbot Sidebar"
 ---
 
 :::warning
-This tutorial is a community contribution and is not supported by the Open WebUI team. It serves only as a demonstration on how to customize Open WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
+This tutorial is a community contribution and is not supported by the Sage WebUI team. It serves only as a demonstration on how to customize Sage WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
 :::
 
 ## 🦊 Firefox AI Chatbot Sidebar
 
-# Integrating Open WebUI as a Local AI Chatbot Browser Assistant in Mozilla Firefox
+# Integrating Sage WebUI as a Local AI Chatbot Browser Assistant in Mozilla Firefox
 
 Table of Contents
 =================
@@ -20,7 +20,7 @@ Table of Contents
     * [browser.ml.chat.hideLocalhost](#browsermlchathidelocalhost)
     * [browser.ml.chat.prompts.#](#browsermlchatsprompts)
     * [browser.ml.chat.provider](#browsermlchatprovider)
-4. [URL Parameters for Open WebUI](#url-parameters-for-open-webui)
+4. [URL Parameters for Sage WebUI](#url-parameters-for-open-webui)
     * [Models and Model Selection](#models-and-model-selection)
     * [YouTube Transcription](#youtube-transcription)
     * [Web Search](#web-search)
@@ -33,9 +33,9 @@ Table of Contents
 
 ## Prerequisites
 
-Before integrating Open WebUI as a AI chatbot browser assistant in Mozilla Firefox, ensure you have:
+Before integrating Sage WebUI as a AI chatbot browser assistant in Mozilla Firefox, ensure you have:
 
-* Open WebUI instance URL (local or domain)
+* Sage WebUI instance URL (local or domain)
 * Firefox browser installed
 
 ## Enabling AI Chatbot in Firefox
@@ -66,11 +66,11 @@ To add custom prompts, follow these steps:
 ### browser.ml.chat.provider
 
 1. Search for `browser.ml.chat.provider`
-2. Enter your Open WebUI instance URL, including any optional parameters (e.g., `https://my-open-webui-instance.com/?model=browser-productivity-assistant&temporary-chat=true&tools=jina_web_scrape`)
+2. Enter your Sage WebUI instance URL, including any optional parameters (e.g., `https://my-open-webui-instance.com/?model=browser-productivity-assistant&temporary-chat=true&tools=jina_web_scrape`)
 
-## URL Parameters for Open WebUI
+## URL Parameters for Sage WebUI
 
-The following URL parameters can be used to customize your Open WebUI instance:
+The following URL parameters can be used to customize your Sage WebUI instance:
 
 ### Models and Model Selection
 

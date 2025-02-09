@@ -4,7 +4,7 @@ title: "📦 Exporting and Importing Database"
 ---
 
 
-If you need to migrate your **Open WebUI** data (e.g., chat histories, configurations, etc.) from one server to another or back it up for later use, you can export and import the database. This guide assumes you're running Open WebUI using the internal SQLite database (not PostgreSQL).
+If you need to migrate your **Sage WebUI** data (e.g., chat histories, configurations, etc.) from one server to another or back it up for later use, you can export and import the database. This guide assumes you're running Sage WebUI using the internal SQLite database (not PostgreSQL).
 
 Follow the steps below to export and import the `webui.db` file, which contains your database.
 
@@ -12,7 +12,7 @@ Follow the steps below to export and import the `webui.db` file, which contains 
 
 ### Exporting Database
 
-To export the database from your current Open WebUI instance:
+To export the database from your current Sage WebUI instance:
 
 1. **Use `docker cp` to copy the database file**:  
    The `webui.db` file is located in the container inside the directory `/app/backend/data`. Run the following command to copy it into your local machine:  
@@ -33,8 +33,8 @@ To export the database from your current Open WebUI instance:
 
 After moving the `webui.db` file to the new server, follow these steps:
 
-1. **Install and Run Open WebUI on the New Server**:  
-   Set up and run Open WebUI using a Docker container. Follow the instructions provided in the [🚀 Getting Started](/getting-started) to install and start the Open WebUI container. Once it's running, stop it before performing the import step.
+1. **Install and Run Sage WebUI on the New Server**:  
+   Set up and run Sage WebUI using a Docker container. Follow the instructions provided in the [🚀 Getting Started](/getting-started) to install and start the Sage WebUI container. Once it's running, stop it before performing the import step.
    ```bash
    docker stop open-webui
    ```
@@ -45,13 +45,13 @@ After moving the `webui.db` file to the new server, follow these steps:
    docker cp ./webui.db open-webui:/app/backend/data/webui.db
    ```
 
-3. **Start the Open WebUI container**:  
+3. **Start the Sage WebUI container**:  
    Start the container again to use the imported database.
    ```bash
    docker start open-webui
    ```
 
-   The new server should now be running Open WebUI with your imported database.
+   The new server should now be running Sage WebUI with your imported database.
 
 ---
 
@@ -66,9 +66,9 @@ After moving the `webui.db` file to the new server, follow these steps:
 
 This approach is particularly useful when:
 
-- Migrating your Open WebUI data to a new server or machine.
+- Migrating your Sage WebUI data to a new server or machine.
 - Creating backups of your data before an update or modification.
-- Testing Open WebUI on multiple servers with the same setup.
+- Testing Sage WebUI on multiple servers with the same setup.
 
 ```bash
 # Quick commands summary for export and import
@@ -85,4 +85,4 @@ docker cp ./webui.db open-webui:/app/backend/data/webui.db
 docker start open-webui
 ```
 
-With these steps, you can easily manage your Open WebUI migration or backup process. Keep in mind the database format you're using to ensure compatibility.
+With these steps, you can easily manage your Sage WebUI migration or backup process. Keep in mind the database format you're using to ensure compatibility.

@@ -1,15 +1,15 @@
 ---
 sidebar_position: 3
-title: "🔎 Open WebUI RAG Tutorial"
+title: "🔎 Sage WebUI RAG Tutorial"
 ---
 
 :::warning
-This tutorial is a community contribution and is not supported by the Open WebUI team. It serves only as a demonstration on how to customize Open WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
+This tutorial is a community contribution and is not supported by the Sage WebUI team. It serves only as a demonstration on how to customize Sage WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
 :::
 
-# Tutorial: Configuring RAG with Open WebUI Documentation
+# Tutorial: Configuring RAG with Sage WebUI Documentation
 
-In this tutorial, you will learn how to use **Retrieval-Augmented Generation (RAG)** with Open WebUI to load real-world documentation as a knowledge base. We will walk through how to use the latest **Open WebUI Documentation** as an example for this setup.
+In this tutorial, you will learn how to use **Retrieval-Augmented Generation (RAG)** with Sage WebUI to load real-world documentation as a knowledge base. We will walk through how to use the latest **Sage WebUI Documentation** as an example for this setup.
 
 ---
 
@@ -21,7 +21,7 @@ Retrieval-Augmented Generation (RAG) combines **LLMs** with **retrieved knowledg
 
 This tutorial demonstrates how to:
 
-- Upload the latest Open WebUI Documentation as a knowledge base.
+- Upload the latest Sage WebUI Documentation as a knowledge base.
 - Connect it to a custom model.
 - Query the knowledge base for enhanced assistance.
 
@@ -29,9 +29,9 @@ This tutorial demonstrates how to:
 
 ## Setup
 
-### Step-by-Step Setup: Open WebUI Documentation as Knowledge Base
+### Step-by-Step Setup: Sage WebUI Documentation as Knowledge Base
 
-Follow these steps to set up RAG with **Open WebUI Documentation**:
+Follow these steps to set up RAG with **Sage WebUI Documentation**:
 
 1. **Download the Documentation**:
    - Download the latest documentation:
@@ -45,13 +45,13 @@ Follow these steps to set up RAG with **Open WebUI Documentation**:
 
 4. **Create a Knowledge Base**:
    - Navigate to **Workspace** > **Knowledge** > **+ Create a Knowledge Base**.
-   - Name it: `Open WebUI Documentation`
+   - Name it: `Sage WebUI Documentation`
    - Purpose: **Assistance**
 
    > Click **Create Knowledge**.
 
 5. **Upload the Files**:
-   - Drag and drop the `.md` and `.mdx` files from the extracted folder into the **Open WebUI Documentation** knowledge base.
+   - Drag and drop the `.md` and `.mdx` files from the extracted folder into the **Sage WebUI Documentation** knowledge base.
 
 ---
 
@@ -63,9 +63,9 @@ Follow these steps to set up RAG with **Open WebUI Documentation**:
    - Go to **Workspace** > **Models** > **+ Add New Model**.
 
 2. **Configure the Model**:
-   - **Name**: `Open WebUI`
+   - **Name**: `Sage WebUI`
    - **Base Model**: *(Select the appropriate Llama or other available model)*
-   - **Knowledge Source**: Select **Open WebUI Documentation** from the dropdown.
+   - **Knowledge Source**: Select **Sage WebUI Documentation** from the dropdown.
 
 3. **Save the Model**.
 
@@ -73,10 +73,10 @@ Follow these steps to set up RAG with **Open WebUI Documentation**:
 
 ## Examples and Usage
 
-### Query the Open WebUI Documentation Model
+### Query the Sage WebUI Documentation Model
 
 1. **Start a New Chat**:
-   - Navigate to **New Chat** and select the `Open WebUI` model.
+   - Navigate to **New Chat** and select the `Sage WebUI` model.
 
 2. **Example Queries**:
 
@@ -86,7 +86,7 @@ Follow these steps to set up RAG with **Open WebUI Documentation**:
    ```
 
    ```
-   User: "How do I update Open WebUI using Docker?"
+   User: "How do I update Sage WebUI using Docker?"
    System: "Refer to `docker/updating.md`: Use `docker pull` and restart the container."
    ```
 
@@ -102,4 +102,4 @@ Follow these steps to set up RAG with **Open WebUI Documentation**:
 
 ---
 
-With this setup, you can effectively use the **Open WebUI Documentation** to assist users by retrieving relevant information for their queries. Enjoy building and querying your custom knowledge-enhanced models!
+With this setup, you can effectively use the **Sage WebUI Documentation** to assist users by retrieving relevant information for their queries. Enjoy building and querying your custom knowledge-enhanced models!
