@@ -30,7 +30,7 @@ To share a chat:
 
 When you select `Share to Sage WebUI Community`:
 
-* A new tab will open, allowing you to upload your chat as a snapshot to the Sage WebUI community website (https://openwebui.com/chats/upload).
+* A new tab will open, allowing you to upload your chat as a snapshot to the Sage WebUI community website (https://sage.education/chats/upload).
 * You can control who can view your uploaded chat by choosing from the following access settings:
   * **Private**: Only you can access this chat.
   * **Public**: Anyone on the internet can view the messages displayed in the chat snapshot.
@@ -42,7 +42,7 @@ Note: You can change the permission level of your shared chats on the community 
 **Currently, shared chats on the community website cannot be found through search. However, future updates are planned to allow public chats to be discoverable by the public if their permission is set to `Public` or `Public, Full History`.**
 :::
 
-Example of a shared chat to the community platform website: https://openwebui.com/c/iamg30/5e3c569f-905e-4d68-a96d-8a99cc65c90f
+Example of a shared chat to the community platform website: https://sage.education/c/iamg30/5e3c569f-905e-4d68-a96d-8a99cc65c90f
 
 #### Copying a Share Link
 
@@ -79,7 +79,7 @@ The **Share Chat** Modal includes the following options:
 
 * **before**: Opens a new tab to view the previously shared chat from the share link.
 * **delete this link**: Deletes the shared link of the chat and presents the initial share chat modal.
-* **Share to Sage WebUI Community**: Opens a new tab for https://openwebui.com/chats/upload with the chat ready to be shared as a snapshot.
+* **Share to Sage WebUI Community**: Opens a new tab for https://sage.education/chats/upload with the chat ready to be shared as a snapshot.
 * **Update and Copy Link**: Updates the snapshot of the chat of the previously shared chat link and copies it to your device's clipboard.
 
 ### Deleting Shared Chats

@@ -36,7 +36,7 @@ If you're seeing a connection error when trying to access Ollama, it might be be
 
 **Example Docker Command**:
 ```bash
-docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 🔗 After running the above, your WebUI should be available at `http://localhost:8080`.
 
@@ -52,7 +52,7 @@ Encountered an SSL error? It could be an issue with the Hugging Face server. Her
 
 **Example Docker Command for Connected Issues**:
 ```bash
-docker run -d -p 3000:8080 -e HF_ENDPOINT=https://hf-mirror.com/ --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+docker run -d -p 3000:8080 -e HF_ENDPOINT=https://hf-mirror.com/ --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 ## 🍏 Podman on MacOS
@@ -67,6 +67,6 @@ Running on MacOS with Podman? Here’s how to ensure connectivity:
 
 **Example Podman Command**:
 ```bash
-podman run -d --network slirp4netns:allow_host_loopback=true -p 3000:8080 -e OLLAMA_BASE_URL=http://host.containers.internal:11434 -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+podman run -d --network slirp4netns:allow_host_loopback=true -p 3000:8080 -e OLLAMA_BASE_URL=http://host.containers.internal:11434 -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 

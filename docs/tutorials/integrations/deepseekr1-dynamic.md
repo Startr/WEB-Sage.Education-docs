@@ -60,7 +60,7 @@ DeepSeek-R1-GGUF/
 
 ## Step 3: Make Sure Sage WebUI is Installed and Running  
 
-If you don’t already have **Sage WebUI** installed, no worries! It’s a simple setup. Just follow the [Sage WebUI documentation here](https://docs.openwebui.com/). Once installed, start the application — we’ll connect it in a later step to interact with the DeepSeek-R1 model.  
+If you don’t already have **Sage WebUI** installed, no worries! It’s a simple setup. Just follow the [Sage WebUI documentation here](/). Once installed, start the application — we’ll connect it in a later step to interact with the DeepSeek-R1 model.  
 
 
 ## Step 4: Serve the Model Using Llama.cpp  

@@ -9,14 +9,14 @@ const config: Config = {
 	favicon: "images/favicon.png",
 
 	// Set the production url of your site here
-	url: "https://openwebui.com",
+	url: "https://sage.education",
 	// Set the /<baseUrl>/ pathname under which your site is served
 	// For GitHub pages deployment, it is often '/<projectName>/'
 	baseUrl: "/",
 
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
-	organizationName: "open-webui", // Usually your GitHub org/user name.
+	organizationName: "Startr", // Usually your GitHub org/user name.
 	projectName: "docs", // Usually your repo name.
 
 	onBrokenLinks: "throw",
@@ -45,7 +45,7 @@ const config: Config = {
 					routeBasePath: "/",
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
-					editUrl: "https://github.com/open-webui/docs/blob/main",
+					editUrl: "https://github.com/Startr/WEB-Sage.Education-docs/blob/main",
 					exclude: ["**/tab-**/**"],
 				},
 				// blog: false,
@@ -93,7 +93,7 @@ const config: Config = {
 				//   position: "left",
 				// },
 				{
-					href: "https://github.com/open-webui/open-webui",
+					href: "https://github.com/Startr/AI-WEB-openwebui",
 					position: "right",
 					className: "header-github-link",
 					"aria-label": "GitHub repository",
@@ -131,7 +131,7 @@ const config: Config = {
 					items: [
 						{
 							label: "GitHub",
-							href: "https://github.com/open-webui/open-webui",
+							href: "https://github.com/Startr/AI-WEB-openwebui",
 						},
 						{
 							label: "Discord",
@@ -148,11 +148,11 @@ const config: Config = {
 					items: [
 						{
 							label: "Release Notes",
-							to: "https://github.com/open-webui/open-webui/blob/main/CHANGELOG.md",
+							to: "https://github.com/Startr/AI-WEB-openwebui/blob/main/CHANGELOG.md",
 						},
 						{
 							label: "About",
-							to: "https://openwebui.com",
+							to: "https://sage.education",
 						},
 					],
 				},

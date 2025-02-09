@@ -24,7 +24,7 @@ docker rm -f open-webui
    This will update the Docker image, but it won't update the running container or its data.
 
 ```bash
-docker pull ghcr.io/open-webui/open-webui:main
+docker pull ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 
@@ -45,7 +45,7 @@ docker volume rm open-webui
    If you didn't remove the existing data, this will start the container with the updated image and the existing data. If you removed the existing data, this will start the container with the updated image and a new, empty volume. **For Nvidia GPU support, add `--gpus all` to the docker run command**
 
 ```bash
-docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main
+docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 ## Automatically Updating Sage WebUI with Watchtower
@@ -80,7 +80,7 @@ You can also integrate Watchtower with your `docker-compose.yml` file to automat
 version: '3'
 services:
   open-webui:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/Startr/AI-WEB-openwebui:main
     ports:
       - "3000:8080"
     volumes:
@@ -108,4 +108,4 @@ The data is stored in a Docker volume named `open-webui`. The path to the volume
 docker volume inspect open-webui
 ```
 
-This will show you the details of the volume, including the mountpoint, which is usually located in `/var/lib/docker/volumes/open-webui/_data`.
+This will show you the details of the volume, including the mountpoint, which is usually located in `/var/lib/docker/volumes/AI-WEB-openwebui/_data`.

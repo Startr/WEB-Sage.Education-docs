@@ -15,7 +15,7 @@ We appreciate your interest in contributing tutorials to the Sage WebUI document
 
 1. **Fork the `openwebui/docs` GitHub Repository**
 
-   - Navigate to the [Sage WebUI Docs Repository](https://github.com/open-webui/docs) on GitHub.
+   - Navigate to the [Sage WebUI Docs Repository](https://github.com/Startr/docs) on GitHub.
    - Click the **Fork** button at the top-right corner to create a copy under your GitHub account.
 
 2. **Enable GitHub Actions**
@@ -61,7 +61,7 @@ b. **Modify `docusaurus.config.ts` to Use Environment Variables**
        title: "Sage WebUI",
        tagline: "ChatGPT-Style WebUI for LLMs (Formerly Ollama WebUI)",
        favicon: "images/favicon.png",
-       url: process.env.SITE_URL || "https://openwebui.com",
+       url: process.env.SITE_URL || "https://sage.education",
        baseUrl: process.env.BASE_URL || "/",
        ...
      };

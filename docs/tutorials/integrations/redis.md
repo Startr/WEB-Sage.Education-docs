@@ -99,7 +99,7 @@ docker run -d \
   -e ENABLE_WEBSOCKET_SUPPORT="true" \
   -e WEBSOCKET_MANAGER="redis" \
   -e WEBSOCKET_REDIS_URL="redis://127.0.0.1:6379/1" \
-  ghcr.io/open-webui/open-webui:main
+  ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 Replace `127.0.0.1` with the actual IP address of your Redis container in the Docker network.

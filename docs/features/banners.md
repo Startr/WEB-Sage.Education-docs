@@ -31,7 +31,7 @@ Alternatively, you can configure banners through environment variables. To do th
 [{"id": "string","type": "string [info, success, warning, error]","title": "string","content": "string","dismissible": False,"timestamp": 1000}]
 ```
 
-For more information on configuring environment variables in Sage WebUI, see [Environment Variable Configuration](https://docs.openwebui.com/getting-started/env-configuration#webui_banners).
+For more information on configuring environment variables in Sage WebUI, see [Environment Variable Configuration](/getting-started/env-configuration#webui_banners).
 
 Environment Variable Description
 ---------------------------------

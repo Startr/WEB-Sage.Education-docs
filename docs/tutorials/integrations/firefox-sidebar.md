@@ -101,7 +101,7 @@ The following URL parameters can be used to customize your Sage WebUI instance:
 
 * `temporary-chat`: Mark the chat as a temporary session by setting this parameter to `true` (e.g., `/?temporary-chat=true`)
 
-See https://docs.openwebui.com/features/chat-features/url-params for more info on URL parameters and how to use them.
+See /features/chat-features/url-params for more info on URL parameters and how to use them.
 
 ## Additional about:config Settings
 

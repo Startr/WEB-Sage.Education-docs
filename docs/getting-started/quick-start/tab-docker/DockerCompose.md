@@ -16,7 +16,7 @@ Here is an example configuration file for setting up Sage WebUI with Docker Comp
 version: '3'
 services:
   openwebui:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/Startr/AI-WEB-openwebui:main
     ports:
       - "3000:8080"
     volumes:

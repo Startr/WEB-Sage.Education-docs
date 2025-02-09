@@ -13,7 +13,7 @@ As new variables are introduced, this page will be updated to reflect the growin
 
 :::info
 
-This page is up to date with Sage WebUI release version [v0.5.1](https://github.com/open-webui/open-webui/releases/tag/v0.5.1), but is still a work in progress to later include more accurate descriptions, listing out options available for environment variables, defaults, and improving descriptions.
+This page is up to date with Sage WebUI release version [v0.5.1](https://github.com/Startr/AI-WEB-openwebui/releases/tag/v0.5.1), but is still a work in progress to later include more accurate descriptions, listing out options available for environment variables, defaults, and improving descriptions.
 
 :::
 
@@ -38,7 +38,7 @@ Please note that `PersistentConfig` environment variables are clearly marked as 
 The following environment variables are used by `backend/config.py` to provide Sage WebUI startup
 configuration. Please note that some variables may have different default values depending on
 whether you're running Sage WebUI directly or via Docker. For more information on logging
-environment variables, see our [logging documentation](https://docs.openwebui.com/getting-started/advanced-topics/logging)).
+environment variables, see our [logging documentation](/getting-started/advanced-topics/logging)).
 
 ### General
 
@@ -103,7 +103,7 @@ This will run the Sage WebUI on port `9999`. The `PORT` environment variable is 
 
 :::danger
 
-This should **only** ever be set to `False` when [ENABLE_OAUTH_SIGNUP](https://docs.openwebui.com/getting-started/env-configuration/#enable_oauth_signup)
+This should **only** ever be set to `False` when [ENABLE_OAUTH_SIGNUP](/getting-started/env-configuration/#enable_oauth_signup)
 is also being used and set to `True`. Failure to do so will result in the inability to login.
 
 :::

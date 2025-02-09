@@ -8,7 +8,7 @@ Podman is a daemonless container engine for developing, managing, and running OC
 - **Run a Container:**
 
   ```bash
-  podman run -d --name openwebui -p 3000:8080 ghcr.io/open-webui/open-webui:main
+  podman run -d --name openwebui -p 3000:8080 ghcr.io/Startr/AI-WEB-openwebui:main
   ```
 
 - **List Running Containers:**

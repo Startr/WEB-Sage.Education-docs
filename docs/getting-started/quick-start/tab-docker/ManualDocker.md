@@ -7,7 +7,7 @@ Follow these steps to install Sage WebUI with Docker.
 Start by pulling the latest Sage WebUI Docker image from the GitHub Container Registry.
 
 ```bash
-docker pull ghcr.io/open-webui/open-webui:main
+docker pull ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 ## Step 2: Run the Container
@@ -15,7 +15,7 @@ docker pull ghcr.io/open-webui/open-webui:main
 Run the container with default settings. This command includes a volume mapping to ensure persistent data storage.
 
 ```bash
-docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main
+docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 ### Important Flags
@@ -28,7 +28,7 @@ docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghc
 For Nvidia GPU support, add `--gpus all` to the `docker run` command:
 
 ```bash
-docker run -d -p 3000:8080 --gpus all -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:cuda
+docker run -d -p 3000:8080 --gpus all -v open-webui:/app/backend/data --name open-webui ghcr.io/Startr/AI-WEB-openwebui:cuda
 ```
 
 
@@ -37,7 +37,7 @@ docker run -d -p 3000:8080 --gpus all -v open-webui:/app/backend/data --name ope
 To bypass the login page for a single-user setup, set the `WEBUI_AUTH` environment variable to `False`:
 
 ```bash
-docker run -d -p 3000:8080 -e WEBUI_AUTH=False -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main
+docker run -d -p 3000:8080 -e WEBUI_AUTH=False -v open-webui:/app/backend/data --name open-webui ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 :::warning
@@ -49,7 +49,7 @@ You cannot switch between single-user mode and multi-account mode after this cha
 To connect Sage WebUI to an Ollama server located on another host, add the `OLLAMA_BASE_URL` environment variable:
 
 ```bash
-docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=https://example.com -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 ## Access the WebUI

@@ -43,7 +43,7 @@ We understand Docker might not be everyone's preference; however, this approach 
 
 **A:** Updating Sage WebUI requires more than just pulling the new Docker image. Here’s why your updates might not be showing and how to ensure they do:
 
-1. **Updating the Docker Image**: The command `docker pull ghcr.io/open-webui/open-webui:main` updates the Docker image but not the running container or its data.
+1. **Updating the Docker Image**: The command `docker pull ghcr.io/Startr/AI-WEB-openwebui:main` updates the Docker image but not the running container or its data.
 2. **Persistent Data in Docker Volumes**: Docker volumes store data independently of container lifecycles, preserving your data (like chat histories) through updates.
 3. **Applying the Update**: Ensure your update takes effect by removing the existing container (which doesn't delete the volume) and creating a new one with the updated image and existing volume attached.
 
@@ -99,9 +99,9 @@ Everything you need to run Sage WebUI, including your data, remains within your 
 **A:** The SSL error you're encountering when starting Sage WebUI is likely due to the absence of SSL certificates or incorrect configuration of [huggingface.co](https://huggingface.co/). To resolve this issue, you could set up a mirror for HuggingFace, such as [hf-mirror.com](https://hf-mirror.com/), and specify it as the endpoint when starting the Docker container. Use the `-e HF_ENDPOINT=https://hf-mirror.com/` parameter to define the HuggingFace mirror address in the Docker run command. For example, you can modify the Docker run command as follows:
 
 ```bash
-docker run -d -p 3000:8080 -e HF_ENDPOINT=https://hf-mirror.com/ --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+docker run -d -p 3000:8080 -e HF_ENDPOINT=https://hf-mirror.com/ --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 #### **Need Further Assistance?**
 
-If you have any further questions or concerns, please reach out to our [GitHub Issues page](https://github.com/open-webui/open-webui/issues) or our [Discord channel](https://discord.gg/5rJgQTnV4s) for more help and information.
+If you have any further questions or concerns, please reach out to our [GitHub Issues page](https://github.com/Startr/AI-WEB-openwebui/issues) or our [Discord channel](https://discord.gg/5rJgQTnV4s) for more help and information.

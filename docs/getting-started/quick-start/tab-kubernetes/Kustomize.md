@@ -13,7 +13,7 @@ Kustomize allows you to customize Kubernetes YAML configurations.
 1. **Clone the Sage WebUI Manifests:**
 
    ```bash
-   git clone https://github.com/open-webui/k8s-manifests.git
+   git clone https://github.com/Startr/k8s-manifests.git
    cd k8s-manifests
    ```
 

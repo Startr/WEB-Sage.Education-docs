@@ -18,12 +18,12 @@ To fix this, you will need to add the new cert into OI's truststore.
 
 If the environment variable `REQUESTS_CA_BUNDLE` does not work try to set `SSL_CERT_FILE` (as per the [httpx documentation](https://www.python-httpx.org/environment_variables/#ssl_cert_file)) instead with the same value.
 
-Example `compose.yaml` from [@KizzyCode](https://github.com/open-webui/open-webui/issues/1398#issuecomment-2258463210):
+Example `compose.yaml` from [@KizzyCode](https://github.com/Startr/AI-WEB-openwebui/issues/1398#issuecomment-2258463210):
 
 ```yaml
 services:
   openwebui:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/Startr/AI-WEB-openwebui:main
     volumes:
       - /var/containers/openwebui:/app/backend/data:rw
       - /etc/containers/openwebui/compusrv.crt:/etc/ssl/certs/ca-certificates.crt:ro

@@ -27,4 +27,4 @@ Stay current with the latest features and security patches with our [Updating Sa
 
 ---
 
-Happy exploring! 🎉 If you have questions, join our [community](https://discord.gg/5rJgQTnV4s) or raise an issue on [GitHub](https://github.com/open-webui/open-webui).
+Happy exploring! 🎉 If you have questions, join our [community](https://discord.gg/5rJgQTnV4s) or raise an issue on [GitHub](https://github.com/Startr/AI-WEB-openwebui).

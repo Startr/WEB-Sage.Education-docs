@@ -23,13 +23,13 @@ _(Replace `open-webui` with your container's name if it's different.)_
 2. Pull the latest version:
 
    ```bash
-   docker pull ghcr.io/open-webui/open-webui:main
+   docker pull ghcr.io/Startr/AI-WEB-openwebui:main
    ```
 
 3. Start the container again:
 
    ```bash
-   docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main
+   docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/Startr/AI-WEB-openwebui:main
    ```
 
 Both methods will get your Docker instance updated and running with the latest build.

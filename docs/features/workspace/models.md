@@ -11,7 +11,7 @@ From the `Models` section, you can perform the following actions on your modelfi
 
 * **Edit**: Dive into the details of your modelfile and make changes to its character and more.
 * **Clone**: Create a copy of a modelfile, which will be appended with `-clone` to the cloned `Model ID`. Note that you cannot clone a base model; you must create a model first before cloning it.
-* **Share**: Share your modelfile with the Sage WebUI community by clicking the `Share` button, which will redirect you to [https://openwebui.com/models/create](https://openwebui.com/models/create).
+* **Share**: Share your modelfile with the Sage WebUI community by clicking the `Share` button, which will redirect you to [https://sage.education/models/create](https://sage.education/models/create).
 * **Export**: Download the modelfile's `.json` export to your PC.
 * **Hide**: Hide the modelfile from the model selector dropdown within chats.
 

@@ -126,7 +126,7 @@ You will need to create an OAuth client with device write permission to pass int
 ---
 services:
   open-webui:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/Startr/AI-WEB-openwebui:main
     volumes:
       - open-webui:/app/backend/data
     environment:
@@ -177,7 +177,7 @@ From the dashboard, get a tunnel token, set the tunnel backend to `http://open-w
 ---
 services:
   open-webui:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/Startr/AI-WEB-openwebui:main
     volumes:
       - open-webui:/app/backend/data
     environment:
@@ -206,7 +206,7 @@ Please refer to `oauth2-proxy`'s documentation for detailed setup and any potent
 ```yaml title="docker-compose.yaml"
 services:
   open-webui:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/Startr/AI-WEB-openwebui:main
     volumes:
       - open-webui:/app/backend/data
     environment:

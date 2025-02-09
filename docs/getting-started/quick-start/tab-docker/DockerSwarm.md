@@ -28,7 +28,7 @@ Choose the appropriate command based on your hardware setup:
 
     services:
       openWebUI:
-        image: ghcr.io/open-webui/open-webui:main
+        image: ghcr.io/Startr/AI-WEB-openwebui:main
         depends_on:
             - chromadb
             - ollama

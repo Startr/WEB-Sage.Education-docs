@@ -59,9 +59,9 @@ def main():
     print(f"Scanning git ref: {git_ref}")
 
     urls = [
-        f"https://raw.githubusercontent.com/open-webui/open-webui/{git_ref}/backend/open_webui/config.py",
-        f"https://raw.githubusercontent.com/open-webui/open-webui/{git_ref}/backend/open_webui/env.py",
-        f"https://raw.githubusercontent.com/open-webui/open-webui/{git_ref}/backend/open_webui/migrations/env.py",
+        f"https://raw.githubusercontent.com/Startr/AI-WEB-openwebui/{git_ref}/backend/open_webui/config.py",
+        f"https://raw.githubusercontent.com/Startr/AI-WEB-openwebui/{git_ref}/backend/open_webui/env.py",
+        f"https://raw.githubusercontent.com/Startr/AI-WEB-openwebui/{git_ref}/backend/open_webui/migrations/env.py",
     ]
     filenames = ["config.py", "env.py", "migrations/env.py"]
 

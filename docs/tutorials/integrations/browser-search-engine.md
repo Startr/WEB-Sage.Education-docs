@@ -36,7 +36,7 @@ docker run -d \
   --name open-webui \
   --restart always \
   -e WEBUI_URL="https://<your-open-webui-url>" \
-  ghcr.io/open-webui/open-webui:main
+  ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 Alternatively, you can add the variable to your `.env` file:

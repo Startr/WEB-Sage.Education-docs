@@ -35,7 +35,7 @@ Follow these steps to set up RAG with **Sage WebUI Documentation**:
 
 1. **Download the Documentation**:
    - Download the latest documentation:
-     [https://github.com/open-webui/docs/archive/refs/heads/main.zip](https://github.com/open-webui/docs/archive/refs/heads/main.zip)
+     [https://github.com/Startr/docs/archive/refs/heads/main.zip](https://github.com/Startr/docs/archive/refs/heads/main.zip)
 
 2. **Extract the Files**:
    - Extract the `main.zip` file to get all documentation files.
