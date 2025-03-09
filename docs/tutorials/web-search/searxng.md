@@ -1,15 +1,13 @@
 ---
-sidebar_position: 5
-title: "🌐 Web Search"
+sidebar_position: 10
+title: "SearXNG"
 ---
 
 :::warning
 This tutorial is a community contribution and is not supported by the Sage WebUI team. It serves only as a demonstration on how to customize Sage WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
 :::
 
-# 🌐 Web Search
-
-This guide provides instructions on how to set up web search capabilities in Sage WebUI using various search engines.
+This guide provides instructions on how to set up web search capabilities in Sage Open WebUI using SearXNG in Docker.
 
 ## SearXNG (Docker)
 
