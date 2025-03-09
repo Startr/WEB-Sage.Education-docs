@@ -25,7 +25,7 @@ There are several global configuration options for OAuth:
 ### Google
 
 To configure a Google OAuth client, please refer to [Google's documentation](https://support.google.com/cloud/answer/6158849) on how to create a Google OAuth client for a **web application**.
-The allowed redirect URI should include `<open-webui>/oauth/google/callback`.
+The allowed redirect URI should include `<sage-open-webui>/oauth/google/callback`.
 
 The following environment variables are required:
 
@@ -35,7 +35,7 @@ The following environment variables are required:
 ### Microsoft
 
 To configure a Microsoft OAuth client, please refer to [Microsoft's documentation](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app) on how to create a Microsoft OAuth client for a **web application**.
-The allowed redirect URI should include `<open-webui>/oauth/microsoft/callback`.
+The allowed redirect URI should include `<sage-open-webui>/oauth/microsoft/callback`.
 
 Support for Microsoft OAuth is currently limited to a single tenant, that is a single Entra organization or personal Microsoft accounts.
 
@@ -48,7 +48,7 @@ The following environment variables are required:
 ### Github
 
 To configure a Github OAuth Client, please refer to [Github's documentation](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps) on how to create a OAuth App or Github App for a **web application**.
-The allowed redirect URI should include `<open-webui>/oauth/github/callback`.
+The allowed redirect URI should include `<sage-open-webui>/oauth/github/callback`.
 
 The following environment variables are required:
 
@@ -60,7 +60,7 @@ The following environment variables are required:
 Any authentication provider that supports OIDC can be configured.
 The `email` claim is required.
 `name` and `picture` claims are used if available.
-The allowed redirect URI should include `<open-webui>/oauth/oidc/callback`.
+The allowed redirect URI should include `<sage-open-webui>/oauth/oidc/callback`.
 
 The following environment variables are used:
 
@@ -128,7 +128,7 @@ Optionally, you can also define the `WEBUI_AUTH_TRUSTED_NAME_HEADER` to determin
 
 [Tailscale Serve](https://tailscale.com/kb/1242/tailscale-serve) allows you to share a service within your tailnet, and Tailscale will set the header `Tailscale-User-Login` with the email address of the requester.
 
-Below is an example serve config with a corresponding Docker Compose file that starts a Tailscale sidecar, exposing Sage WebUI to the tailnet with the tag `open-webui` and hostname `open-webui`, and can be reachable at `https://open-webui.TAILNET_NAME.ts.net`.
+Below is an example serve config with a corresponding Docker Compose file that starts a Tailscale sidecar, exposing Sage WebUI to the tailnet with the tag `sage-open-webui` and hostname `sage-open-webui`, and can be reachable at `https://sage-open-webui.TAILNET_NAME.ts.net`.
 You will need to create an OAuth client with device write permission to pass into the Tailscale container as `TS_AUTHKEY`.
 
 ```json title="tailscale/serve.json"
@@ -142,7 +142,7 @@ You will need to create an OAuth client with device write permission to pass int
         "${TS_CERT_DOMAIN}:443": {
             "Handlers": {
                 "/": {
-                    "Proxy": "http://open-webui:8080"
+                    "Proxy": "http://sage-open-webui:8080"
                 }
             }
         }
@@ -154,10 +154,10 @@ You will need to create an OAuth client with device write permission to pass int
 ```yaml title="docker-compose.yaml"
 ---
 services:
-  open-webui:
+  sage-open-webui:
     image: ghcr.io/Startr/AI-WEB-openwebui:main
     volumes:
-      - open-webui:/app/backend/data
+      - sage-open-webui:/app/backend/data
     environment:
       - HOST=127.0.0.1
       - WEBUI_AUTH_TRUSTED_EMAIL_HEADER=Tailscale-User-Login
@@ -168,10 +168,10 @@ services:
     environment:
       - TS_AUTH_ONCE=true
       - TS_AUTHKEY=${TS_AUTHKEY}
-      - TS_EXTRA_ARGS=--advertise-tags=tag:open-webui
+      - TS_EXTRA_ARGS=--advertise-tags=tag:sage-open-webui
       - TS_SERVE_CONFIG=/config/serve.json
       - TS_STATE_DIR=/var/lib/tailscale
-      - TS_HOSTNAME=open-webui
+      - TS_HOSTNAME=sage-open-webui
     volumes:
       - tailscale:/var/lib/tailscale
       - ./tailscale:/config
@@ -182,7 +182,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  open-webui: {}
+  sage-open-webui: {}
   tailscale: {}
 ```
 
@@ -200,15 +200,15 @@ This is barely documented by Cloudflare, but `Cf-Access-Authenticated-User-Email
 
 Below is an example Docker Compose file that sets up a Cloudflare sidecar.
 Configuration is done via the dashboard.
-From the dashboard, get a tunnel token, set the tunnel backend to `http://open-webui:8080`, and ensure that "Protect with Access" is checked and configured.
+From the dashboard, get a tunnel token, set the tunnel backend to `http://sage-open-webui:8080`, and ensure that "Protect with Access" is checked and configured.
 
 ```yaml title="docker-compose.yaml"
 ---
 services:
-  open-webui:
+  sage-open-webui:
     image: ghcr.io/Startr/AI-WEB-openwebui:main
     volumes:
-      - open-webui:/app/backend/data
+      - sage-open-webui:/app/backend/data
     environment:
       - HOST=127.0.0.1
       - WEBUI_AUTH_TRUSTED_EMAIL_HEADER=Cf-Access-Authenticated-User-Email
@@ -221,7 +221,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  open-webui: {}
+  sage-open-webui: {}
 
 ```
 
@@ -234,10 +234,10 @@ Please refer to `oauth2-proxy`'s documentation for detailed setup and any potent
 
 ```yaml title="docker-compose.yaml"
 services:
-  open-webui:
+  sage-open-webui:
     image: ghcr.io/Startr/AI-WEB-openwebui:main
     volumes:
-      - open-webui:/app/backend/data
+      - sage-open-webui:/app/backend/data
     environment:
       - 'HOST=127.0.0.1'
       - 'WEBUI_AUTH_TRUSTED_EMAIL_HEADER=X-Forwarded-Email'
@@ -247,7 +247,7 @@ services:
     image: quay.io/oauth2-proxy/oauth2-proxy:v7.6.0
     environment:
       OAUTH2_PROXY_HTTP_ADDRESS: 0.0.0.0:4180
-      OAUTH2_PROXY_UPSTREAMS: http://open-webui:8080/
+      OAUTH2_PROXY_UPSTREAMS: http://sage-open-webui:8080/
       OAUTH2_PROXY_PROVIDER: google
       OAUTH2_PROXY_CLIENT_ID: REPLACEME_OAUTH_CLIENT_ID
       OAUTH2_PROXY_CLIENT_SECRET: REPLACEME_OAUTH_CLIENT_ID
@@ -264,9 +264,9 @@ services:
 ### Authentik
 
 To configure a [Authentik](https://goauthentik.io/) OAuth client, please refer to [documentation](https://docs.goauthentik.io/docs/applications) on how to create an application and `OAuth2/OpenID Provider`.
-The allowed redirect URI should include `<open-webui>/oauth/oidc/callback`.
+The allowed redirect URI should include `<sage-open-webui>/oauth/oidc/callback`.
 
-While creating provider, please note `App-name`, `Client-ID` and `Client-Secret` and use it for open-webui environment variables:
+While creating provider, please note `App-name`, `Client-ID` and `Client-Secret` and use it for sage-open-webui environment variables:
 
 ```
       - 'ENABLE_OAUTH_SIGNUP=true'
@@ -276,7 +276,7 @@ While creating provider, please note `App-name`, `Client-ID` and `Client-Secret`
       - 'OAUTH_CLIENT_ID=<Client-ID>'
       - 'OAUTH_CLIENT_SECRET=<Client-Secret>'
       - 'OAUTH_SCOPES=openid email profile'
-      - 'OPENID_REDIRECT_URI=https://<open-webui>/oauth/oidc/callback'
+      - 'OPENID_REDIRECT_URI=https://<sage-open-webui>/oauth/oidc/callback'
 ```
 
 ### Authelia

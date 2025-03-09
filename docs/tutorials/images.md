@@ -27,7 +27,7 @@ Sage WebUI supports image generation through the **AUTOMATIC1111** [API](https:/
 3. For Docker installation of WebUI with the environment variables preset, use the following command:
 
    ```
-   docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -e AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860/ -e ENABLE_IMAGE_GENERATION=True -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
+   docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -e AUTOMATIC1111_BASE_URL=http://host.docker.internal:7860/ -e ENABLE_IMAGE_GENERATION=True -v sage-open-webui:/app/backend/data --name sage-open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
    ```
 
 ### Setting Up Sage WebUI with AUTOMATIC1111
@@ -64,7 +64,7 @@ ComfyUI provides an alternative interface for managing and interacting with imag
 3. For Docker installation of WebUI with the environment variables preset, use the following command:
 
    ```
-   docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -e COMFYUI_BASE_URL=http://host.docker.internal:7860/ -e ENABLE_IMAGE_GENERATION=True -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
+   docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -e COMFYUI_BASE_URL=http://host.docker.internal:7860/ -e ENABLE_IMAGE_GENERATION=True -v sage-open-webui:/app/backend/data --name sage-open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
    ```
 
 ### Setting Up Sage WebUI with ComfyUI
@@ -130,7 +130,7 @@ After completing these steps, your ComfyUI setup should be integrated with Sage 
 
 ### Configuring with SwarmUI
 
-SwarmUI utilizes ComfyUI as its backend. In order to get Sage WebUI to work with SwarmUI you will have to append `ComfyBackendDirect` to the `ComfyUI Base URL`. Additionally, you will want to setup SwarmUI with LAN access. After aforementioned adjustments, setting up SwarmUI to work with Sage WebUI will be the same as [Step one: Configure Sage WebUI Settings](https://github.com/Startr/docs/edit/main/docs/features/images.md#step-1-configure-open-webui-settings) as outlined above.
+SwarmUI utilizes ComfyUI as its backend. In order to get Sage WebUI to work with SwarmUI you will have to append `ComfyBackendDirect` to the `ComfyUI Base URL`. Additionally, you will want to setup SwarmUI with LAN access. After aforementioned adjustments, setting up SwarmUI to work with Sage WebUI will be the same as [Step one: Configure Sage WebUI Settings](https://github.com/Startr/docs/edit/main/docs/features/images.md#step-1-configure-sage-open-webui-settings) as outlined above.
 ![Install SwarmUI with LAN Access](https://github.com/user-attachments/assets/a6567e13-1ced-4743-8d8e-be526207f9f6)
 
 #### SwarmUI API URL

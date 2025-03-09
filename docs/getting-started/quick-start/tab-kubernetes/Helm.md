@@ -13,14 +13,14 @@ Helm helps you manage Kubernetes applications.
 1. **Add Sage WebUI Helm Repository:**
 
    ```bash
-   helm repo add open-webui https://open-webui.github.io/helm-charts
+   helm repo add sage-open-webui https://sage-open-webui.github.io/helm-charts
    helm repo update
    ```
 
 2. **Install Sage WebUI Chart:**
 
    ```bash
-   helm install openwebui open-webui/open-webui
+   helm install openwebui sage-open-webui/sage-open-webui
    ```
 
 3. **Verify Installation:**

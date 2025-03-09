@@ -13,10 +13,10 @@ To update your local Docker installation of Sage WebUI to the latest version ava
 
 1. **Stop and remove the current container**:
 
-   This will stop the running container and remove it, but it won't delete the data stored in the Docker volume. (Replace `open-webui` with your container's name throughout the updating process if it's different for you.)
+   This will stop the running container and remove it, but it won't delete the data stored in the Docker volume. (Replace `sage-open-webui` with your container's name throughout the updating process if it's different for you.)
 
 ```bash
-docker rm -f open-webui
+docker rm -f sage-open-webui
 ```
 
 2. **Pull the latest Docker image**:
@@ -33,10 +33,10 @@ docker pull ghcr.io/Startr/AI-WEB-openwebui:main
 
    If you want to start with a clean slate, you can remove the existing data in the Docker volume. Be careful, as this will delete all your chat histories and other data.
 
-   The data is stored in a Docker volume named `open-webui`. You can remove it with the following command:
+   The data is stored in a Docker volume named `sage-open-webui`. You can remove it with the following command:
 
 ```bash
-docker volume rm open-webui
+docker volume rm sage-open-webui
 ```
 :::
 
@@ -45,7 +45,7 @@ docker volume rm open-webui
    If you didn't remove the existing data, this will start the container with the updated image and the existing data. If you removed the existing data, this will start the container with the updated image and a new, empty volume. **For Nvidia GPU support, add `--gpus all` to the docker run command**
 
 ```bash
-docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/Startr/AI-WEB-openwebui:main
+docker run -d -p 3000:8080 -v sage-open-webui:/app/backend/data --name sage-open-webui ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 ## Automatically Updating Sage WebUI with Watchtower
@@ -57,7 +57,7 @@ You can use [Watchtower](https://containrrr.dev/watchtower/) to automate the upd
 You can run Watchtower as a one-time update to stop the current container, pull the latest image, and start a new container with the updated image and existing volume attached (**For Nvidia GPU support, add `--gpus all` to the docker run command**):
 
 ```bash
-docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once open-webui
+docker run --rm --volume /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once sage-open-webui
 ```
 
 ### Option 2: Running Watchtower as a Separate Container
@@ -67,7 +67,7 @@ You can run Watchtower as a separate container that watches and updates your Sag
 ```bash
 docker run -d --name watchtower \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  containrrr/watchtower -i 300 open-webui
+  containrrr/watchtower -i 300 sage-open-webui
 ```
 
 This will start Watchtower in detached mode, watching your Sage WebUI container for updates every 5 minutes.
@@ -79,36 +79,36 @@ You can also integrate Watchtower with your `docker-compose.yml` file to automat
 ```yml
 version: '3'
 services:
-  open-webui:
+  sage-open-webui:
     image: ghcr.io/Startr/AI-WEB-openwebui:main
     ports:
       - "3000:8080"
     volumes:
-      - open-webui:/app/backend/data
+      - sage-open-webui:/app/backend/data
 
   watchtower:
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 300 open-webui
+    command: --interval 300 sage-open-webui
     depends_on:
-      - open-webui
+      - sage-open-webui
 
 volumes:
-  open-webui:
+  sage-open-webui:
 ```
 
 In this example, Watchtower is integrated with the `docker-compose.yml` file and watches the Sage WebUI container for updates every 5 minutes.
 
 ## Persistent Data in Docker Volumes
 
-The data is stored in a Docker volume named `open-webui`. The path to the volume is not directly accessible, but you can inspect the volume with the following command:
+The data is stored in a Docker volume named `sage-open-webui`. The path to the volume is not directly accessible, but you can inspect the volume with the following command:
 
 ```bash
-docker volume inspect open-webui
+docker volume inspect sage-open-webui
 ```
 
-This will show you the details of the volume, including the mountpoint, which is usually located in `/var/lib/docker/volumes/open-webui/_data`.  
+This will show you the details of the volume, including the mountpoint, which is usually located in `/var/lib/docker/volumes/sage-open-webui/_data`.  
 
 On Windows 10 + WSL 2, Docker volumes are located here (type in the Windows file explorer): 
 - \\\wsl$\docker-desktop\mnt\docker-desktop-disk\data\docker\volumes

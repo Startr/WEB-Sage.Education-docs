@@ -19,7 +19,7 @@ Welcome to the **Sage WebUI Development Setup Guide!** Whether you're a novice o
 
    ```bash
    git clone https://github.com/Startr/AI-WEB-openwebui.git
-   cd open-webui
+   cd sage-open-webui
    ```
 
 2. **Frontend Setup**:
@@ -53,8 +53,8 @@ Welcome to the **Sage WebUI Development Setup Guide!** Whether you're a novice o
    - Use **Conda** for environment setup:
 
      ```bash
-     conda create --name open-webui python=3.11
-     conda activate open-webui
+     conda create --name sage-open-webui python=3.11
+     conda activate sage-open-webui
      ```
 
    - Install dependencies:

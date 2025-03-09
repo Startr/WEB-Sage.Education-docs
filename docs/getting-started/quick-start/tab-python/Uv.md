@@ -22,10 +22,10 @@ Once `uv` is installed, running Sage WebUI is a breeze. Use the command below, e
 
 - **macOS/Linux**:  
   ```bash
-  DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve
+  DATA_DIR=~/.sage-open-webui uvx --python 3.11 sage-open-webui@latest serve
   ```
 
 - **Windows**:  
   ```powershell
-  $env:DATA_DIR="C:\open-webui\data"; uvx --python 3.11 open-webui@latest serve
+  $env:DATA_DIR="C:\sage-open-webui\data"; uvx --python 3.11 sage-open-webui@latest serve
   ```

@@ -262,7 +262,7 @@ Add the following environment variables to your Sage WebUI `docker-compose.yaml`
 
 ```yaml
 services:
-  open-webui:
+  sage-open-webui:
     environment:
       ENABLE_RAG_WEB_SEARCH: True
       RAG_WEB_SEARCH_ENGINE: "searxng"
@@ -327,7 +327,7 @@ docker run --name searxng --env-file .env -v ./searxng:/etc/searxng:rw -p 8080:8
 Confirm connectivity to SearXNG from your Sage WebUI container instance in your command line interface:
 
 ```bash
-docker exec -it open-webui curl http://host.docker.internal:8080/search?q=this+is+a+test+query&format=json
+docker exec -it sage-open-webui curl http://host.docker.internal:8080/search?q=this+is+a+test+query&format=json
 ```
 
 ## 4. GUI Configuration
@@ -394,7 +394,7 @@ Add the following environment variables to your Sage WebUI `docker-compose.yaml`
 
 ```yaml
 services:
-  open-webui:
+  sage-open-webui:
     environment:
       ENABLE_RAG_WEB_SEARCH: True
       RAG_WEB_SEARCH_ENGINE: "brave"
@@ -419,7 +419,7 @@ Add the following environment variables to your Sage WebUI `docker-compose.yaml`
 
 ```yaml
 services:
-  open-webui:
+  sage-open-webui:
     environment:
       ENABLE_RAG_WEB_SEARCH: True
       RAG_WEB_SEARCH_ENGINE: "mojeek"

@@ -81,7 +81,7 @@ Once you have LibreTranslate up and running in Docker, you can configure the int
 * [LibreTranslate Filter Function](https://openwebui.com/f/iamg30/libretranslate_filter)
 * [LibreTranslate Action Function](https://openwebui.com/f/jthesse/libretranslate_action)
 * [MultiLanguage LibreTranslate Action Function](https://openwebui.com/f/iamg30/multilanguage_libretranslate_action)
-* [LibreTranslate Filter Pipeline](https://github.com/open-webui/pipelines/blob/main/examples/filters/libretranslate_filter_pipeline.py)
+* [LibreTranslate Filter Pipeline](https://github.com/sage-open-webui/pipelines/blob/main/examples/filters/libretranslate_filter_pipeline.py)
 
 Choose the integration that best suits your needs and follow the instructions to configure it within Sage Open WebUI.
 

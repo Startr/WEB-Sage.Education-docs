@@ -93,9 +93,9 @@ When running Sage WebUI using Docker, you need to connect it to the same Docker 
 
 ```bash
 docker run -d \
-  --name open-webui \
+  --name sage-open-webui \
   --network openwebui-network \
-  -v open-webui:/app/backend/data \
+  -v sage-open-webui:/app/backend/data \
   -e ENABLE_WEBSOCKET_SUPPORT="true" \
   -e WEBSOCKET_MANAGER="redis" \
   -e WEBSOCKET_REDIS_URL="redis://127.0.0.1:6379/1" \

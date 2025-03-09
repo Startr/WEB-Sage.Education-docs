@@ -87,7 +87,7 @@ b. **Modify `docusaurus.config.ts` to Use Environment Variables**
 8. **Submit a Pull Request**
 
    - Once your tutorial is ready, commit your changes to your forked repository.
-   - Navigate to the original `open-webui/docs` repository.
+   - Navigate to the original `sage-open-webui/docs` repository.
    - Click **New Pull Request** and select your fork and branch as the source.
    - Provide a descriptive title and description for your PR.
    - Submit the pull request for review.

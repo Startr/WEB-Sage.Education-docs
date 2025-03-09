@@ -15,7 +15,7 @@ Add the following environment variables to your Sage Open WebUI `docker-compose.
 
 ```yaml
 services:
-  open-webui:
+  sage-open-webui:
     environment:
       ENABLE_RAG_WEB_SEARCH: True
       RAG_WEB_SEARCH_ENGINE: "brave"

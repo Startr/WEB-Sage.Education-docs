@@ -78,10 +78,10 @@ environment variables, see our [logging documentation](/getting-started/advanced
 - Description: Sets the port to run Sage WebUI from.
 
 :::info
-If you're running the application via Python and using the `open-webui serve` command, you cannot set the port using the `PORT` configuration. Instead, you must specify it directly as a command-line argument using the `--port` flag. For example:
+If you're running the application via Python and using the `sage-open-webui serve` command, you cannot set the port using the `PORT` configuration. Instead, you must specify it directly as a command-line argument using the `--port` flag. For example:
 
 ```bash
-open-webui serve --port 9999
+sage-open-webui serve --port 9999
 ```
 
 This will run the Sage WebUI on port `9999`. The `PORT` environment variable is disregarded in this mode.
@@ -291,7 +291,7 @@ allowing the client to wait indefinitely.
 - Type: `str`
 - Default: `http://localhost:11434`
 - Docker Default:
-  - If `K8S_FLAG` is set: `http://ollama-service.open-webui.svc.cluster.local:11434`
+  - If `K8S_FLAG` is set: `http://ollama-service.sage-open-webui.svc.cluster.local:11434`
   - If `USE_OLLAMA_DOCKER=True`: `http://localhost:11434`
   - Else `http://host.docker.internal:11434`
 - Description: Configures the Ollama backend URL.
@@ -314,7 +314,7 @@ allowing the client to wait indefinitely.
 
 - Type: `bool`
 - Default: `False`
-- Description: If set, assumes Helm chart deployment and sets [`OLLAMA_BASE_URL`](#ollama_base_url) to `http://ollama-service.open-webui.svc.cluster.local:11434`
+- Description: If set, assumes Helm chart deployment and sets [`OLLAMA_BASE_URL`](#ollama_base_url) to `http://ollama-service.sage-open-webui.svc.cluster.local:11434`
 
 ### OpenAI
 

@@ -9,9 +9,9 @@ This tutorial is a community contribution and is not supported by the Sage Open 
 
 ---
 
-# Integrating Open-WebUI with Amazon Bedrock
+# Integrating sage-open-webui with Amazon Bedrock
 
-In this tutorial, we'll explore one of the most common and popular approaches to integrate Open-WebUI with Amazon Bedrock.
+In this tutorial, we'll explore one of the most common and popular approaches to integrate sage-open-webui with Amazon Bedrock.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ AWS provides good documentation for request accessing / enabling these models he
 
 ## Step 2: Configure the Bedrock Access Gateway
 
-Now that we have access to at least one Bedrock base model, we need to configure the Bedrock Access Gateway, or BAG. You can think of the BAG as kind of proxy or middleware developed by AWS that wraps around AWS native endpoints/SDK for Bedrock and, in turn, exposes endpoints that are compatible with OpenAI's schema, which is what Open-WebUI requires.
+Now that we have access to at least one Bedrock base model, we need to configure the Bedrock Access Gateway, or BAG. You can think of the BAG as kind of proxy or middleware developed by AWS that wraps around AWS native endpoints/SDK for Bedrock and, in turn, exposes endpoints that are compatible with OpenAI's schema, which is what sage-open-webui requires.
 
 For reference, here is a simple mapping between the endpoints:
 
@@ -76,9 +76,9 @@ You should now be able to access the BAG's swagger page at: http://localhost:800
 
 ![Bedrock Access Gateway Swagger](/images/tutorials/amazon-bedrock/amazon-bedrock-proxy-api.png)
 
-## Step 3: Add Connection in Open-WebUI
+## Step 3: Add Connection in sage-open-webui
 
-Now that you the BAG up-and-running, it's time to add it as a new connection in Open-WebUI.
+Now that you the BAG up-and-running, it's time to add it as a new connection in sage-open-webui.
 
 - Under the Admin Panel, go to Settings -> Connections.
 - Use the "+" (plus) button to add a new connection under the OpenAI
@@ -96,7 +96,7 @@ You should now see all your Bedrock models available!
 
 ## Other Helpful Tutorials
 
-These are a few other very helpful tutorials when working to integrate Open-WebUI with Amazon Bedrock.
+These are a few other very helpful tutorials when working to integrate sage-open-webui with Amazon Bedrock.
 
-- https://gauravve.medium.com/connecting-open-webui-to-aws-bedrock-a1f0082c8cb2
+- https://gauravve.medium.com/connecting-sage-open-webui-to-aws-bedrock-a1f0082c8cb2
 - https://jrpospos.blog/posts/2024/08/using-amazon-bedrock-with-openwebui-when-working-with-sensitive-data/

@@ -43,13 +43,13 @@ Get **enhanced capabilities**, including **custom theming and branding**, **Serv
 **If Ollama is on your computer**, use this command:
 
 ```bash
-docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
+docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v sage-open-webui:/app/backend/data --name sage-open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 **To run Sage WebUI with Nvidia GPU support**, use this command:
 
 ```bash
-docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:cuda
+docker run -d -p 3000:8080 --gpus all --add-host=host.docker.internal:host-gateway -v sage-open-webui:/app/backend/data --name sage-open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:cuda
 ```
 
 ### Sage WebUI Bundled with Ollama
@@ -60,14 +60,14 @@ This installation method uses a single container image that bundles Sage WebUI w
   Utilize GPU resources by running the following command:
 
   ```bash
-  docker run -d -p 3000:8080 --gpus=all -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:ollama
+  docker run -d -p 3000:8080 --gpus=all -v ollama:/root/.ollama -v sage-open-webui:/app/backend/data --name sage-open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:ollama
   ```
 
 - **For CPU Only**:
   If you're not using a GPU, use this command instead:
 
   ```bash
-  docker run -d -p 3000:8080 -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:ollama
+  docker run -d -p 3000:8080 -v ollama:/root/.ollama -v sage-open-webui:/app/backend/data --name sage-open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:ollama
   ```
 
 Both commands facilitate a built-in, hassle-free installation of both Sage WebUI and Ollama, ensuring that you can get everything up and running swiftly.
@@ -83,7 +83,7 @@ The `:dev` branch contains the latest unstable features and changes. Use it at y
 If you want to try out the latest bleeding-edge features and are okay with occasional instability, you can use the `:dev` tag like this:
 
 ```bash
-docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:dev
+docker run -d -p 3000:8080 -v sage-open-webui:/app/backend/data --name sage-open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:dev
 ```
 
 ### Updating Sage WebUI
@@ -93,16 +93,16 @@ To update Sage WebUI container easily, follow these steps:
 #### Manual Update
 Use [Watchtower](https://containrrr.dev/watchtower) to update your Docker container manually:
 ```bash
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once open-webui
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once sage-open-webui
 ```
 
 #### Automatic Updates
 Keep your container updated automatically every 5 minutes:
 ```bash
-docker run -d --name watchtower --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --interval 300 open-webui
+docker run -d --name watchtower --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --interval 300 sage-open-webui
 ```
 
-🔧 **Note**: Replace `open-webui` with your container name if it's different.
+🔧 **Note**: Replace `sage-open-webui` with your container name if it's different.
 
 ## Manual Installation
 
@@ -132,12 +132,12 @@ Once `uv` is installed, running Sage WebUI is a breeze. Use the command below, e
 
 - **macOS/Linux**:  
   ```bash
-  DATA_DIR=~/.open-webui uvx --python 3.11 open-webui@latest serve
+  DATA_DIR=~/.sage-open-webui uvx --python 3.11 sage-open-webui@latest serve
   ```
 
 - **Windows**:  
   ```powershell
-  $env:DATA_DIR="C:\open-webui\data"; uvx --python 3.11 open-webui@latest serve
+  $env:DATA_DIR="C:\sage-open-webui\data"; uvx --python 3.11 sage-open-webui@latest serve
   ```
 
 
@@ -152,14 +152,14 @@ Python 3.11 is the development environment. Python 3.12 seems to work but has no
 
    Open your terminal and run the following command:  
    ```bash
-   pip install open-webui
+   pip install sage-open-webui
    ```
 
 2. **Start Sage WebUI**:  
 
    Once installed, start the server using:  
    ```bash
-   open-webui serve
+   sage-open-webui serve
    ```
 
 ### Updating Sage WebUI
@@ -167,14 +167,14 @@ Python 3.11 is the development environment. Python 3.12 seems to work but has no
 To update to the latest version, simply run:  
 
 ```bash
-pip install --upgrade open-webui
+pip install --upgrade sage-open-webui
 ```
 
 This method installs all necessary dependencies and starts Sage WebUI, allowing for a simple and efficient setup. After installation, you can access Sage WebUI at [http://localhost:8080](http://localhost:8080). Enjoy! 😄
 
 ## Other Installation Methods
 
-We offer various installation alternatives, including non-Docker native installation methods, Docker Compose, Kustomize, and Helm. Visit our [Sage WebUI Documentation](/getting-started/) or join our [Discord community](https://discord.gg/5rJgQTnV4s) for comprehensive guidance.
+We offer various installation alternatives, including non-Docker native installation methods, Docker Compose, Kustomize, and Helm. Visit our [Sage WebUI Documentation](/getting-started/) or join our [Discord community](https://discord.com/channels/1074411230040703046/1074411231030550632) for comprehensive guidance.
 
 Continue with the full [getting started guide](/getting-started).
 

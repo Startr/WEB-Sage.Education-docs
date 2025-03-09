@@ -16,17 +16,17 @@ We understand Docker might not be everyone's preference; however, this approach 
 - [Q: Why am I asked to sign up? Where are my data being sent to?](#q-why-am-i-asked-to-sign-up-where-are-my-data-being-sent-to)
 - [Q: Why can't my Docker container connect to services on the host using localhost?](#q-why-cant-my-docker-container-connect-to-services-on-the-host-using-localhost)
 - [Q: How do I make my host's services accessible to Docker containers?](#q-how-do-i-make-my-hosts-services-accessible-to-docker-containers)
-- [Q: Why isn't my Sage WebUI updating? I've re-pulled/restarted the container, and nothing changed.](#q-why-isnt-my-open-webui-updating-ive-re-pulledrestarted-the-container-and-nothing-changed)
+- [Q: Why isn't my Sage WebUI updating? I've re-pulled/restarted the container, and nothing changed.](#q-why-isnt-my-sage-open-webui-updating-ive-re-pulledrestarted-the-container-and-nothing-changed)
 - [Q: Wait, why would I delete my container? Won't I lose my data?](#q-wait-why-would-i-delete-my-container-wont-i-lose-my-data)
 - [Q: Should I use the distro-packaged Docker or the official Docker package?](#q-should-i-use-the-distro-packaged-docker-or-the-official-docker-package)
 - [Q: Is GPU support available in Docker?](#q-is-gpu-support-available-in-docker)
-- [Q: Why does Sage WebUI emphasize the use of Docker?](#q-why-does-open-webui-emphasize-the-use-of-docker)
+- [Q: Why does Sage WebUI emphasize the use of Docker?](#q-why-does-sage-open-webui-emphasize-the-use-of-docker)
 - [Q: Why doesn't Speech-to-Text (STT) and Text-to-Speech (TTS) work in my deployment?](#q-why-doesnt-speech-to-text-stt-and-text-to-speech-tts-work-in-my-deployment)
-- [Q: Why doesn't Sage WebUI include built-in HTTPS support?](#q-why-doesnt-open-webui-include-built-in-https-support)
-- [Q: I updated/restarted/installed some new software and now Sage WebUI isn't working anymore!](#q-i-updatedrestartedinstalled-some-new-software-and-now-open-webui-isnt-working-anymore)
+- [Q: Why doesn't Sage WebUI include built-in HTTPS support?](#q-why-doesnt-sage-open-webui-include-built-in-https-support)
+- [Q: I updated/restarted/installed some new software and now Sage WebUI isn't working anymore!](#q-i-updatedrestartedinstalled-some-new-software-and-now-sage-open-webui-isnt-working-anymore)
 - [Q: I updated/restarted and now my login isn't working anymore, I had to create a new account and all my chats are gone.](#q-i-updatedrestarted-and-now-my-login-isnt-working-anymore-i-had-to-create-a-new-account-and-all-my-chats-are-gone)
 - [Q: I tried to login and couldn't, made a new account and now I'm being told my account needs to be activated by an admin.](#q-i-tried-to-login-and-couldnt-made-a-new-account-and-now-im-being-told-my-account-needs-to-be-activated-by-an-admin)
-- [Q: Why can't Sage WebUI start with an SSL error?](#q-why-cant-open-webui-start-with-an-ssl-error)
+- [Q: Why can't Sage WebUI start with an SSL error?](#q-why-cant-sage-open-webui-start-with-an-ssl-error)
 
 #### **Q: How do I customize the logo and branding?**  
 
@@ -95,7 +95,7 @@ Everything you need to run Sage WebUI, including your data, remains within your 
 
 #### **Q: I updated/restarted and now my login isn't working anymore, I had to create a new account and all my chats are gone.**
 
-**A:** This issue typically arises when a Docker container is created without mounting a volume for `/app/backend/data` or if the designated Sage WebUI volume (usually named `open-webui` in our examples) was unintentionally deleted. Docker volumes are crucial for persisting your data across container lifecycles. If you find yourself needing to create a new account after a restart, it's likely you've initiated a new container without attaching the existing volume where your data resides. Ensure that your Docker run command includes a volume mount pointing to the correct data location to prevent data loss.
+**A:** This issue typically arises when a Docker container is created without mounting a volume for `/app/backend/data` or if the designated Sage WebUI volume (usually named `sage-open-webui` in our examples) was unintentionally deleted. Docker volumes are crucial for persisting your data across container lifecycles. If you find yourself needing to create a new account after a restart, it's likely you've initiated a new container without attaching the existing volume where your data resides. Ensure that your Docker run command includes a volume mount pointing to the correct data location to prevent data loss.
 
 #### **Q: I tried to login and couldn't, made a new account and now I'm being told my account needs to be activated by an admin.**
 
@@ -106,9 +106,9 @@ Everything you need to run Sage WebUI, including your data, remains within your 
 **A:** The SSL error you're encountering when starting Sage WebUI is likely due to the absence of SSL certificates or incorrect configuration of [huggingface.co](https://huggingface.co/). To resolve this issue, you could set up a mirror for HuggingFace, such as [hf-mirror.com](https://hf-mirror.com/), and specify it as the endpoint when starting the Docker container. Use the `-e HF_ENDPOINT=https://hf-mirror.com/` parameter to define the HuggingFace mirror address in the Docker run command. For example, you can modify the Docker run command as follows:
 
 ```bash
-docker run -d -p 3000:8080 -e HF_ENDPOINT=https://hf-mirror.com/ --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
+docker run -d -p 3000:8080 -e HF_ENDPOINT=https://hf-mirror.com/ --add-host=host.docker.internal:host-gateway -v sage-open-webui:/app/backend/data --name sage-open-webui --restart always ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 #### **Need Further Assistance?**
 
-If you have any further questions or concerns, please reach out to our [GitHub Issues page](https://github.com/Startr/AI-WEB-openwebui/issues) or our [Discord channel](https://discord.gg/5rJgQTnV4s) for more help and information.
+If you have any further questions or concerns, please reach out to our [GitHub Issues page](https://github.com/Startr/AI-WEB-openwebui/issues) or our [Discord channel](https://discord.com/channels/1074411230040703046/1074411231030550632) for more help and information.

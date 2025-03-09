@@ -13,7 +13,7 @@ Using self-signed certificates is suitable for development or internal use where
 
 2. **Create Nginx Configuration File:**
 
-    **`conf.d/open-webui.conf`:**
+    **`conf.d/sage-open-webui.conf`:**
 
     ```nginx
     server {
@@ -60,7 +60,7 @@ Using self-signed certificates is suitable for development or internal use where
           - ./conf.d:/etc/nginx/conf.d
           - ./ssl:/etc/nginx/ssl
         depends_on:
-          - open-webui
+          - sage-open-webui
     ```
 
 5. **Start Nginx Service:**

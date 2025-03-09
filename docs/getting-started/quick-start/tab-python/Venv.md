@@ -28,11 +28,11 @@ Create isolated Python environments using `venv`.
 3. **Install Sage WebUI:**
 
    ```bash
-   pip install open-webui
+   pip install sage-open-webui
    ```
 
 4. **Start the Server:**
 
    ```bash
-   open-webui serve
+   sage-open-webui serve
    ```

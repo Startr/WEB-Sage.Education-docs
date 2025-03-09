@@ -32,17 +32,17 @@ If you are running Sage WebUI using Docker, you can set the environment variable
 docker run -d \
   -p 3000:8080 \
   --add-host=host.docker.internal:host-gateway \
-  -v open-webui:/app/backend/data \
-  --name open-webui \
+  -v sage-open-webui:/app/backend/data \
+  --name sage-open-webui \
   --restart always \
-  -e WEBUI_URL="https://<your-open-webui-url>" \
+  -e WEBUI_URL="https://<your-sage-open-webui-url>" \
   ghcr.io/Startr/AI-WEB-openwebui:main
 ```
 
 Alternatively, you can add the variable to your `.env` file:
 
 ```plaintext
-WEBUI_URL=https://<your-open-webui-url>
+WEBUI_URL=https://<your-sage-open-webui-url>
 ```
 
 ### Step 2: Add Sage WebUI as a Custom Search Engine
@@ -58,7 +58,7 @@ WEBUI_URL=https://<your-open-webui-url>
     - **URL with %s in place of query**:
 
       ```
-      https://<your-open-webui-url>/?q=%s
+      https://<your-sage-open-webui-url>/?q=%s
       ```
 
 5. Click **Add** to save the configuration.
@@ -80,7 +80,7 @@ Alternatively:
 If you wish to utilize a specific model for your search, modify the URL format to include the model ID:
 
 ```
-https://<your-open-webui-url>/?models=<model_id>&q=%s
+https://<your-sage-open-webui-url>/?models=<model_id>&q=%s
 ```
 
 **Note:** The model ID will need to be URL-encoded. Special characters like spaces or slashes need to be encoded (e.g., `my model` becomes `my%20model`).

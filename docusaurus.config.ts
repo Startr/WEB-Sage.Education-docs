@@ -135,11 +135,7 @@ const config: Config = {
 						},
 						{
 							label: "Discord",
-							href: "https://discord.gg/5rJgQTnV4s",
-						},
-						{
-							label: "𝕏",
-							href: "https://x.com/OpenWebUI",
+							href: "https://discord.com/channels/1074411230040703046/1074411231030550632",
 						},
 					],
 				},

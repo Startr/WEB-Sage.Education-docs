@@ -17,7 +17,7 @@ To export the database from your current Sage WebUI instance:
 1. **Use `docker cp` to copy the database file**:  
    The `webui.db` file is located in the container inside the directory `/app/backend/data`. Run the following command to copy it into your local machine:  
    ```bash
-   docker cp open-webui:/app/backend/data/webui.db ./webui.db
+   docker cp sage-open-webui:/app/backend/data/webui.db ./webui.db
    ```
 
 2. **Transfer the exported file to the new server**:  
@@ -36,19 +36,19 @@ After moving the `webui.db` file to the new server, follow these steps:
 1. **Install and Run Sage WebUI on the New Server**:  
    Set up and run Sage WebUI using a Docker container. Follow the instructions provided in the [🚀 Getting Started](/getting-started) to install and start the Sage WebUI container. Once it's running, stop it before performing the import step.
    ```bash
-   docker stop open-webui
+   docker stop sage-open-webui
    ```
 
 2. **Use `docker cp` to copy the database file to the container**:  
    Assuming the exported `webui.db` file is in your current working directory, copy it into the container:
    ```bash
-   docker cp ./webui.db open-webui:/app/backend/data/webui.db
+   docker cp ./webui.db sage-open-webui:/app/backend/data/webui.db
    ```
 
 3. **Start the Sage WebUI container**:  
    Start the container again to use the imported database.
    ```bash
-   docker start open-webui
+   docker start sage-open-webui
    ```
 
    The new server should now be running Sage WebUI with your imported database.
@@ -73,16 +73,16 @@ This approach is particularly useful when:
 ```bash
 # Quick commands summary for export and import
 # Export:
-docker cp open-webui:/app/backend/data/webui.db ./webui.db
+docker cp sage-open-webui:/app/backend/data/webui.db ./webui.db
 
 # Stop container on the new server:
-docker stop open-webui
+docker stop sage-open-webui
 
 # Import:
-docker cp ./webui.db open-webui:/app/backend/data/webui.db
+docker cp ./webui.db sage-open-webui:/app/backend/data/webui.db
 
 # Start container:
-docker start open-webui
+docker start sage-open-webui
 ```
 
 With these steps, you can easily manage your Sage WebUI migration or backup process. Keep in mind the database format you're using to ensure compatibility.

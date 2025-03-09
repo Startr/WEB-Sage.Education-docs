@@ -20,7 +20,7 @@ Table of Contents
     * [browser.ml.chat.hideLocalhost](#browsermlchathidelocalhost)
     * [browser.ml.chat.prompts.#](#browsermlchatsprompts)
     * [browser.ml.chat.provider](#browsermlchatprovider)
-4. [URL Parameters for Sage WebUI](#url-parameters-for-open-webui)
+4. [URL Parameters for Sage WebUI](#url-parameters-for-sage-open-webui)
     * [Models and Model Selection](#models-and-model-selection)
     * [YouTube Transcription](#youtube-transcription)
     * [Web Search](#web-search)
@@ -66,7 +66,7 @@ To add custom prompts, follow these steps:
 ### browser.ml.chat.provider
 
 1. Search for `browser.ml.chat.provider`
-2. Enter your Sage WebUI instance URL, including any optional parameters (e.g., `https://my-open-webui-instance.com/?model=browser-productivity-assistant&temporary-chat=true&tools=jina_web_scrape`)
+2. Enter your Sage WebUI instance URL, including any optional parameters (e.g., `https://my-sage-open-webui-instance.com/?model=browser-productivity-assistant&temporary-chat=true&tools=jina_web_scrape`)
 
 ## URL Parameters for Sage WebUI
 
