@@ -99,7 +99,7 @@ const config: Config = {
 					"aria-label": "GitHub repository",
 				},
 				{
-					href: "https://discord.com/invite/BnZs8Yew",
+					href: "https://discord.com/channels/1074411230040703046/1074411231030550632",
 					position: "right",
 					className: "header-discord-link",
 					"aria-label": "Discord server",
