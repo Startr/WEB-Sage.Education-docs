@@ -35,7 +35,7 @@ Please note that `PersistentConfig` environment variables are clearly marked as 
 
 ## App/Backend
 
-The following environment variables are used by `backend/config.py` to provide Sage WebUI startup
+The following environment variables are used by `backend/open_webui/config.py` to provide Sage WebUI startup
 configuration. Please note that some variables may have different default values depending on
 whether you're running Sage WebUI directly or via Docker. For more information on logging
 environment variables, see our [logging documentation](/getting-started/advanced-topics/logging)).
