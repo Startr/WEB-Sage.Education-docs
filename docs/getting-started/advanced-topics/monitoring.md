@@ -3,21 +3,21 @@ sidebar_position: 6
 title: "📊 Monitoring"
 ---
 
-# Monitoring Open WebUI
+# Monitoring Sage Open WebUI
 
-Monitoring your Open WebUI instance is crucial for ensuring reliable service and quickly identifying issues. This guide covers three levels of monitoring:
+Monitoring your Sage Open WebUI instance is crucial for ensuring reliable service and quickly identifying issues. This guide covers three levels of monitoring:
 - Basic health checks for service availability
 - Model connectivity verification
 - Deep health checks with model response testing
 
 ## Basic Health Check Endpoint
 
-Open WebUI exposes a health check endpoint at `/health` that returns a 200 OK status when the service is running properly. 
+Sage Open WebUI exposes a health check endpoint at `/health` that returns a 200 OK status when the service is running properly. 
 
 
 ```bash
    # No auth needed for this endpoint
-   curl https://your-open-webuiinstance/health
+   curl https://your-sage-instance/health
 ```
 
 ### Using Uptime Kuma
@@ -26,8 +26,8 @@ Open WebUI exposes a health check endpoint at `/health` that returns a 200 OK st
 1. In your Uptime Kuma dashboard, click "Add New Monitor"
 2. Set the following configuration:
    - Monitor Type: HTTP(s)
-   - Name: Open WebUI
-   - URL: `http://your-open-webuiinstance:8080/health`
+   - Name: Sage Open WebUI
+   - URL: `http://your-sage-instance:8080/health`
    - Monitoring Interval: 60 seconds (or your preferred interval)
    - Retry count: 3 (recommended)
 
@@ -36,16 +36,16 @@ The health check will verify:
 - The application is running
 - Basic database connectivity
 
-## Open WebUI Model Connectivity
+## Sage Open WebUI Model Connectivity
 
-To verify that Open WebUI can successfully connect to and list your configured models, you can monitor the models endpoint. This endpoint requires authentication and checks Open WebUI's ability to communicate with your model providers.
+To verify that Sage Open WebUI can successfully connect to and list your configured models, you can monitor the models endpoint. This endpoint requires authentication and checks Sage Open WebUI's ability to communicate with your model providers.
 
 See [API documentation](https://docs.openwebui.com/getting-started/api-endpoints/#-retrieve-all-models) for more details about the models endpoint.
 
 
 ```bash
    # See steps below to get an API key
-   curl -H "Authorization: Bearer sk-adfadsflkhasdflkasdflkh" https://your-open-webuiinstance/api/models
+   curl -H "Authorization: Bearer sk-adfadsflkhasdflkasdflkh" https://your-sage-instance/api/models
 ```
 
 ### Authentication Setup
@@ -57,7 +57,7 @@ See [API documentation](https://docs.openwebui.com/getting-started/api-endpoints
 
 2. Get your API key [docs](https://docs.openwebui.com/getting-started/api-endpoints):
    - (Optional), consider making a non-admin user for the monitoring API key
-   - Go to Settings > Account in Open WebUI
+   - Go to Settings > Account in Sage Open WebUI
    - Generate a new API key specifically for monitoring
    - Copy the API key for use in Uptime Kuma
 
@@ -67,8 +67,8 @@ Note: If you don't see the option to generate API keys in your Settings > Accoun
 
 1. Create a new monitor in Uptime Kuma:
    - Monitor Type: HTTP(s) - JSON Query
-   - Name: Open WebUI Model Connectivity
-   - URL: `http://your-open-webuiinstance:8080/api/models`
+   - Name: Sage Open WebUI Model Connectivity
+   - URL: `http://your-sage-instance:8080/api/models`
    - Method: GET
    - Expected Status Code: 200
    - JSON Query: `$count(data[*])>0`
@@ -104,7 +104,7 @@ To verify that models can actually process requests, you can monitor the chat co
 
 ```bash
 # Test model response
-curl -X POST https://your-open-webuiinstance/api/chat/completions \
+curl -X POST https://your-sage-instance/api/chat/completions \
   -H "Authorization: Bearer sk-adfadsflkhasdflkasdflkh" \
   -H "Content-Type: application/json" \
   -d '{

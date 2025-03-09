@@ -88,7 +88,7 @@ If changing the role of a logged in user, they will need to log out and log back
 
 ### OAuth Group Management
 
-Any OAuth provider that can be configured to return groups in the access token can be used to manage user groups in Open WebUI.
+Any OAuth provider that can be configured to return groups in the access token can be used to manage user groups in Sage Open WebUI.
 To use this feature set `ENABLE_OAUTH_GROUP_MANAGEMENT` to `true`.
 You can configure the following environment variables to match the groups returned by the OAuth provider:
 

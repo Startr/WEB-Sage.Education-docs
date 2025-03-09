@@ -3,19 +3,11 @@ import { TopBanner } from "@site/src/components/Sponsors/TopBanner";
 export const TopBanners = () => {
 	const items = [
 		{
-			imgSrc: "/ads/pipelines-banner.png",
-			mobileImgSrc: "/ads/pipelines-banner-mobile.png",
-			url: "https://github.com/Startr/pipelines",
-			name: "Sage WebUI Pipelines",
-			description:
-				"Pipelines: Versatile, UI-Agnostic OpenAI-Compatible Plugin Framework",
-		},
-		{
 			imgSrc: "/ads/sponsor-banner-1.png",
 			mobileImgSrc: "/ads/sponsor-banner-small-1.png",
-			url: "https://davewaring.com/tag/digital-brain-building/",
-			name: "Dave Waring",
-			description: "Follow along as I build my own AI powered digital brain.",
+			url: "https://startr.style/",
+			name: "Startr.Style",
+			description: "Create a website that looks great and is easy to manage.",
 		},
 	];
 

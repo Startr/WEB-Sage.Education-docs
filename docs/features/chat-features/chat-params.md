@@ -29,7 +29,7 @@ Suppose a user wants to set a custom system prompt for a specific conversation. 
 ### 2. **Per-account basis:**
 
 - **Description**: The per-account basis setting refers to the default system prompt and advanced parameters configured for a specific user account. Any user-specific changes can serve as a fallback in situations where lower-level settings aren't defined.
-- **How to set**: Users can set their own system prompt and advanced parameters for their account within the **General** section of the **Settings** menu in Open WebUI.
+- **How to set**: Users can set their own system prompt and advanced parameters for their account within the **General** section of the **Settings** menu in Sage Open WebUI.
 - **Override capabilities**: Users have the ability to set their own system prompt on their account, but they must be aware that such parameters can still be overridden if an administrator has already set the **System Prompt** or specific **Advanced Parameters** on a per-model basis for the particular model being used.
 
 <details>

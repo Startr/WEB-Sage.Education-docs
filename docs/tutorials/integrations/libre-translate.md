@@ -10,7 +10,7 @@ This tutorial is a community contribution and is not supported by the OpenWebUI 
 Overview
 --------
 
-LibreTranslate is a free and open-source machine translation API that supports a wide range of languages. LibreTranslate is a self hosted, offline capable, and easy to setup, and unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source [Argos Translate](https://github.com/argosopentech/argos-translate) library. You can integrate LibreTranslate with Open WebUI to leverage its machine translation capabilities. This documentation provides a step-by-step guide to setting up LibreTranslate in Docker and configuring the integration within Open WebUI.
+LibreTranslate is a free and open-source machine translation API that supports a wide range of languages. LibreTranslate is a self hosted, offline capable, and easy to setup, and unlike other APIs, it doesn't rely on proprietary providers such as Google or Azure to perform translations. Instead, its translation engine is powered by the open source [Argos Translate](https://github.com/argosopentech/argos-translate) library. You can integrate LibreTranslate with Sage Open WebUI to leverage its machine translation capabilities. This documentation provides a step-by-step guide to setting up LibreTranslate in Docker and configuring the integration within Sage Open WebUI.
 
 Setting up LibreTranslate in Docker
 -----------------------------------
@@ -73,17 +73,17 @@ docker-compose up -d
 
 This will start the LibreTranslate service in detached mode.
 
-Configuring the Integration in Open WebUI
+Configuring the Integration in Sage Open WebUI
 -------------------------------------------
 
-Once you have LibreTranslate up and running in Docker, you can configure the integration within Open WebUI. There are several community integrations available, including:
+Once you have LibreTranslate up and running in Docker, you can configure the integration within Sage Open WebUI. There are several community integrations available, including:
 
 * [LibreTranslate Filter Function](https://openwebui.com/f/iamg30/libretranslate_filter)
 * [LibreTranslate Action Function](https://openwebui.com/f/jthesse/libretranslate_action)
 * [MultiLanguage LibreTranslate Action Function](https://openwebui.com/f/iamg30/multilanguage_libretranslate_action)
 * [LibreTranslate Filter Pipeline](https://github.com/open-webui/pipelines/blob/main/examples/filters/libretranslate_filter_pipeline.py)
 
-Choose the integration that best suits your needs and follow the instructions to configure it within Open WebUI.
+Choose the integration that best suits your needs and follow the instructions to configure it within Sage Open WebUI.
 
 Supported languages for the LibreTranslate pipeline & function:
 Really just all the languages that can be found within LibreTranslate, but here is the list:
@@ -101,7 +101,7 @@ Troubleshooting
 Benefits of Integration
 ----------------------
 
-Integrating LibreTranslate with Open WebUI provides several benefits, including:
+Integrating LibreTranslate with Sage Open WebUI provides several benefits, including:
 
 * Machine translation capabilities for a wide range of languages.
 * Improved text analysis and processing.
@@ -110,4 +110,4 @@ Integrating LibreTranslate with Open WebUI provides several benefits, including:
 Conclusion
 ----------
 
-Integrating LibreTranslate with Open WebUI is a straightforward process that can enhance the functionality of your Open WebUI instance. By following the steps outlined in this documentation, you can set up LibreTranslate in Docker and configure the integration within Open WebUI.
+Integrating LibreTranslate with Sage Open WebUI is a straightforward process that can enhance the functionality of your Sage Open WebUI instance. By following the steps outlined in this documentation, you can set up LibreTranslate in Docker and configure the integration within Sage Open WebUI.

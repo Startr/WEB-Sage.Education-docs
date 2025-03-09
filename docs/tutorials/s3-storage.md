@@ -4,12 +4,12 @@ title: "🪣 Switching to S3 Storage"
 ---
 
 :::warning
-This tutorial is a community contribution and is not supported by the Open WebUI team. It serves only as a demonstration on how to customize Open WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
+This tutorial is a community contribution and is not supported by the Sage Open WebUI team. It serves only as a demonstration on how to customize Sage Open WebUI for your specific use case. Want to contribute? Check out the contributing tutorial.
 :::
 
 # 🪣 Switching to S3 Storage
 
-This guide provides instructions on how to switch the default `local` storage in Open WebUI config to Amazon S3.
+This guide provides instructions on how to switch the default `local` storage in Sage Open WebUI config to Amazon S3.
 
 ## Prerequisites
 
